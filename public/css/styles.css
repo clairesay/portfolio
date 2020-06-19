@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+/* COMMON STYLE CHANGES */
+* {
+    margin: 0;
+    font-family: 'Muli', sans-serif;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 32px;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+body {
+    position: relative;
+    margin: 0 1em;
+    min-height: 100vh;
+}
+
+/* GLOBAL */
+#home-link {
+    font-weight: 800;
+    font-size: 24px;
+
+    background-color: #ffdd44;
+    border-radius: 2em;
+    padding: 0.25em 0.75em;
+
+    grid-area: HomeLink;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    width: calc(100vw - 2em);
+    top: 0;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-rows: 72px;
+    grid-template-areas: "HomeLink . AllProjects ContactMe";
+}
+
+header a {
+    display: flex;
+    margin: auto 24px;
+}
+
+.nav-link {
+
+}
+
+.nav-link:nth-of-type(n):hover ~ .nav-link:nth-of-type(n)::before {
+    background-color: beige;
+
+}
+
+.nav-link::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    margin: auto;
+    margin-right: 0.5em;
+    border-radius: 1em;
+    background-color: #ffdd44;
+}
+
+.nav-link:nth-of-type(2) {
+    grid-area: AllProjects;
+}
+
+.nav-link:nth-of-type(3) {
+    grid-area: ContactMe;
+}
+
+/* FOOTER */
+footer {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+
+    background-color: #555555;
+    border-radius: 7px 7px 0 0;
+}
+
+footer * {
+    color: #999999;
+    padding: 1em;
+}
+
+/* INDEX */
+.landing {
+    background-color: #ffdd44;
+    padding-top: 72px;
+    border-radius: 0 0 7px 7px;
+}
+
+.peek {
+    position: relative;
+    height: 50vh;
+}
+
+.peek article {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    bottom: 20px;
+    padding: 1em;
+
+    border: 2px solid #999999;
+    background-color: white;
+}
+
+.peek article * {
+    color: #555555
+}
+
+
+
+
+
