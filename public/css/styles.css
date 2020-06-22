@@ -31,15 +31,31 @@ body {
     font-weight: 800;
     font-size: 24px;
 
-    background-color: white;
+    border-radius: 2em;
+    /* padding: 0.25em 0.75em; */
+    grid-area: HomeLink;
+    transform: scale(1);
+    transition: transform 0.9s ease;
+}
+
+#home-link:hover {
+    transform: scale(1.1);
+}
+
+#home-link div {
     border-radius: 2em;
     padding: 0.25em 0.75em;
+}
 
-    grid-area: HomeLink;
+.white {
+    background-color: white;
+}
+
+.yellow {
+    background-color: #ffdd44;
 }
 
 .landing {
-    background-color: #ffdd44;
     padding: 2em;
     padding-top: 72px;
     border-radius: 0 0 7px 7px;
@@ -63,10 +79,15 @@ header {
 header a {
     display: flex;
     margin: auto 24px;
+    font-weight: 600;
 }
 
-.nav-link:nth-of-type(n):hover::before {
-    background-color: white
+.nav-link.w:nth-of-type(n):hover::before {
+    background-color: white;
+}
+
+.nav-link.y:nth-of-type(n):hover::before {
+    background-color: #ffdd44;
 }
 
 .nav-link::before {
@@ -146,7 +167,7 @@ footer * {
 
 /* ALL-PROJECTS */
 #all-projects .landing {
-    height: 20vh;
+    height: auto;
 }
 
 .all-projects-grid {
@@ -194,6 +215,56 @@ figcaption span {
     font-weight: 200;
     font-size: 14px;
     text-transform: uppercase;
+}
+
+/* CONTACT ME */
+#contact-me .landing {
+    height: 50vh;
+}
+
+#profile-details a {
+    position: relative;
+}
+
+#profile {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+#profile-image {
+    width: 20vw;
+    height: 20vw;
+    background-color: white;
+    border-radius: 20vw;
+}
+
+.social-icon {
+    position: relative;
+    width: 36px;
+    margin: 0.5em 0.5em 0 0;
+}
+
+.social-icon::after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    width: 10px;
+    height: 10px;
+
+    border-radius: 1em;
+    background-color: transparent;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.social-icon:hover::after {
+    background-color: white;
+}
+
+/* PROJECT PAGE */
+.banner-image {
+    width: 100vw;
+    height: calc(20vh - 2em 1em);
 }
 
 @media only screen and (max-width: 800px) {
