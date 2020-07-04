@@ -11,3 +11,8 @@ if (page.includes('all-projects')) {
 } else if (page.includes('contact-me')) {
     contactMe.style.fontWeight = "800";
 }
+
+
+///////////////////// ALL PROJECTS /////////////////////////
+const captionP = document.querySelectorAll('figcaption p');
+
