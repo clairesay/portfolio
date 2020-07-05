@@ -99,10 +99,6 @@ header a {
     background-color: white;
 }
 
-.nav-link.w:nth-of-type(n):visited::before {
-    background-color: white;
-}
-
 .nav-link.y:nth-of-type(n):hover::before {
     background-color: #ffdd44;
 }
@@ -172,10 +168,11 @@ footer * {
     position: absolute;
     width: 200px;
     height: auto;
-    bottom: 20px;
+    bottom: 150px;
     padding: 1em;
 
     background-color: white;
+    box-shadow: 0 0 0.2em #e7e7e7;
 }
 
 .peek article * {
@@ -289,9 +286,9 @@ figcaption p {
 }
 
 /* CONTACT ME */
-#contact-me .landing {
-    height: 50vh;
-    min-height: calc(100vh - 144px - 2em);
+#profile-details {
+    margin: auto;
+    margin-left: 0;
 }
 
 #profile-details a {
@@ -300,7 +297,9 @@ figcaption p {
 
 #profile {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
+    padding-top: calc(72px + 2em);
+    padding-bottom: 4em;
 }
 
 #profile-image {
@@ -308,6 +307,9 @@ figcaption p {
     height: 20vw;
     background-color: white;
     border-radius: 20vw;
+
+    margin-left: auto;
+    margin-right: 2em;
 }
 
 .social-icon {
@@ -333,6 +335,10 @@ figcaption p {
     background-color: white;
 }
 
+.details {
+    min-height: calc(100vh - 144px - 2em);
+}
+
 /* PROJECT PAGE */
 .banner-image {
     width: calc(100vw);
@@ -341,15 +347,13 @@ figcaption p {
     object-fit: cover;
 }
 
-@media only screen and (max-width: 800px) {
-    /* ALL PROJECTS */
+@media only screen and (max-width: 900px) {
+    /* ALL PROJECTS */  
     .project-card {
         width: calc(46vw - 2em);
         height: calc(46vw - 2em);
-    }
-
+    } 
 }
-
 
 @media only screen and (max-width: 600px) {
     /* HEADER */
@@ -379,12 +383,14 @@ figcaption p {
     .landing {
         padding-top: 108px;
     }
-}
 
-@media only screen and (max-width: 450px) {
-    /* HEADER */
-    header {
-        grid-template-columns: 1fr 10fr 74px 74px 10fr 1fr;
+    /* INDEX */
+    .peek article {
+        position: relative;
+        margin: auto;
+        width: 80%;
+        box-shadow: 0 0 0.2em #999999; 
+        bottom: 50px;       
     }
 
     /* ALL PROJECTS */
@@ -393,6 +399,40 @@ figcaption p {
         height: 85vw;
         margin: 1em 0;
         /* height: 100%; */
+    }
+
+    /* CONTACT ME */
+    #profile {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+        margin: auto;
+    }
+
+    #profile-details {
+        margin: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #profile-image {
+        width: 40vw;
+        height: 40vw;
+        border-radius: 40vw;
+        margin: 2em auto;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    /* HEADER */
+    header {
+        grid-template-columns: 1fr 10fr 74px 74px 10fr 1fr;
+    }
+
+    /* CONTACT ME */
+    #profile-image {
+        width: 50vw;
+        height: 50vw;
     }
 }
 
