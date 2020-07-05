@@ -12,7 +12,19 @@ if (page.includes('all-projects')) {
     contactMe.style.fontWeight = "800";
 }
 
-
 ///////////////////// ALL PROJECTS /////////////////////////
 const captionP = document.querySelectorAll('figcaption p');
 
+//////////////////// TOP DROP SHADOW ////////////////////////////
+const header = document.getElementsByTagName('header')[0];
+const body = document.getElementsByTagName('div')[0];
+
+window.addEventListener('scroll', function headerShadow() {
+    if ((window.scrollY > 5) && (header.classList.contains('white'))) {
+        header.style.boxShadow = "0 4px 2px -2px #e7e7e7"
+    } else if ((window.scrollY > 5) && (header.classList.contains('yellow'))) {
+        header.style.boxShadow = "0 4px 2px -2px #e7ca4a"
+    } else {
+        header.style.boxShadow = "0 4px 2px -2px transparent"
+    }
+})

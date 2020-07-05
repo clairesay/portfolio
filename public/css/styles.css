@@ -30,16 +30,21 @@ body {
 #home-link {
     font-weight: 800;
     font-size: 24px;
-
     border-radius: 2em;
     /* padding: 0.25em 0.75em; */
     grid-area: HomeLink;
-    transform: scale(1);
-    transition: transform 0.9s ease;
+    transform-origin: center center;
+    transform: translateX(0);
+    transition: all 0.3s ease-in-out;
+    /* background-color: #ffdd44; */
+    /* padding: 0; */
+    border: 2px solid white;
 }
 
 #home-link:hover {
-    transform: scale(1.02);
+    /* transform: scale(1.02); */
+    transform: translateX(-0.2em);
+    padding: 0.2em;
 }
 
 #home-link div {
@@ -53,6 +58,11 @@ body {
 
 .yellow {
     background-color: #ffdd44;
+}
+
+/* PROJECT DIFFERENCE */
+#project #home-link {
+    border-color: #ffdd44;
 }
 
 .landing {
@@ -86,6 +96,10 @@ header a {
 }
 
 .nav-link.w:nth-of-type(n):hover::before {
+    background-color: white;
+}
+
+.nav-link.w:nth-of-type(n):visited::before {
     background-color: white;
 }
 
@@ -125,18 +139,18 @@ header a {
 
 /* FOOTER */
 footer {
-    /* position: absolute; */
-    /* bottom: 0; */
-
     width: 100%;
+    height: 72px;
 
     background-color: #555555;
     border-radius: 7px 7px 0 0;
+    display: flex;
 }
 
 footer * {
     color: #999999;
-    padding: 1em;
+    margin: auto;
+    /* padding: 1em; */
 }
 
 /* INDEX */
@@ -151,7 +165,7 @@ footer * {
 
 .peek {
     position: relative;
-    height: 50vh;
+    /* height: 50vh; */
 }
 
 .peek article {
@@ -166,6 +180,12 @@ footer * {
 
 .peek article * {
     color: #555555
+}
+
+.peek img {
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
 }
 
 .title-breaker {
@@ -194,14 +214,14 @@ footer * {
     margin: 1em;
 
     border-radius: 3.5px;
-    filter: grayscale(1);
+    filter: grayscale(0);
 
     transition-duration: 0.2s;
     transition-timing-function: ease-in-out;
 }
 
 .project-card:hover {
-    filter: grayscale(0);
+    filter: grayscale(1);
     box-shadow: 0 0 0.2em #e7e7e7;
 }
 
@@ -271,6 +291,7 @@ figcaption p {
 /* CONTACT ME */
 #contact-me .landing {
     height: 50vh;
+    min-height: calc(100vh - 144px - 2em);
 }
 
 #profile-details a {
@@ -314,8 +335,10 @@ figcaption p {
 
 /* PROJECT PAGE */
 .banner-image {
-    width: 100vw;
-    height: calc(20vh - 2em 1em);
+    width: calc(100vw);
+    margin-left: -3em;
+    height: 33vh;
+    object-fit: cover;
 }
 
 @media only screen and (max-width: 800px) {
