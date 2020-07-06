@@ -49,8 +49,27 @@ body {
 
 #home-link div {
     border-radius: 2em;
-    padding: 0.25em 0.75em;
+    padding: 0.1em 0.6em;
 }
+
+/* #home-link div::after {
+    content: '';
+    position: absolute;
+    bottom: 6px;
+    right: 0px;
+    width: 10px;
+    height: 10px;
+
+    border-radius: 1em;
+    background-color: transparent;
+    transform: translateX(0);
+    transition: all 0.2s ease-in-out;
+}
+
+#home-link div:hover::after {
+    background-color: #555555;
+    transform: translateX(-0.2em);
+} */
 
 .white {
     background-color: white;
@@ -141,12 +160,26 @@ footer {
     background-color: #555555;
     border-radius: 7px 7px 0 0;
     display: flex;
+    justify-content: space-between;
 }
 
 footer * {
     color: #999999;
-    margin: auto;
+    margin: auto 0;
+    /* margin-left: 2em; */
     /* padding: 1em; */
+}
+
+footer h3 {
+    margin-left: 1.5em;
+}
+
+footer div {
+    margin-right: 0.5em;
+}
+
+footer .social-icon:hover::after {
+    background-color: #ffdd44;
 }
 
 /* INDEX */
@@ -170,6 +203,7 @@ footer * {
     height: auto;
     bottom: 150px;
     padding: 1em;
+    border-radius: 7px;
 
     background-color: white;
     box-shadow: 0 0 0.2em #e7e7e7;
@@ -211,14 +245,14 @@ footer * {
     margin: 1em;
 
     border-radius: 3.5px;
-    filter: grayscale(0);
+    filter: grayscale(1);
 
     transition-duration: 0.2s;
     transition-timing-function: ease-in-out;
 }
 
 .project-card:hover {
-    filter: grayscale(1);
+    filter: grayscale(0);
     box-shadow: 0 0 0.2em #e7e7e7;
 }
 
