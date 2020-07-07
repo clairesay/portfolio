@@ -235,14 +235,14 @@ footer .social-icon:hover::after {
 }
 
 .project-card {
-    width: calc(30vw - 1em);
-    max-width: 400px;
+    width: 100%;
+    /* max-width: 400px; */
     height: calc(30vw - 1em);
     max-height: 400px;
 
     display: flex;
     flex-direction: column;
-    margin: 1em;
+    /* margin: 1em; */
 
     border-radius: 3.5px;
     filter: grayscale(1);
@@ -265,9 +265,11 @@ footer .social-icon:hover::after {
 
 figcaption {
     height: 24px;
+    max-width: 600px;
     bottom: 0;
     position: absolute;
     display: grid;
+    /* row-gap: 2em; */
     grid-template-rows: auto auto;
     grid-template-columns: 2fr 1fr;
     grid-template-areas: 'Title Date' 'Desc Desc';
@@ -384,8 +386,8 @@ figcaption p {
 @media only screen and (max-width: 900px) {
     /* ALL PROJECTS */  
     .project-card {
-        width: calc(46vw - 2em);
-        height: calc(46vw - 2em);
+        /* width: calc(46vw - 2em);
+        height: calc(46vw - 2em); */
     } 
 }
 
@@ -429,9 +431,9 @@ figcaption p {
 
     /* ALL PROJECTS */
     .project-card {
-        width: 85vw;
+        /* width: 85vw;
         height: 85vw;
-        margin: 1em 0;
+        margin: 1em 0; */
         /* height: 100%; */
     }
 
