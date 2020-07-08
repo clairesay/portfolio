@@ -383,6 +383,52 @@ figcaption p {
     object-fit: cover;
 }
 
+.case-study {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+
+    padding: 2em;
+    padding-top: 0;
+}
+
+/* PROJECT PAGE - PROGRESS BAR */
+#progress-bar {
+    /* background-color: #ffdd44; */
+    display: inline-block;
+    height: 40vh;
+    position: sticky;
+    top: calc(72px + 1em);
+    background-color: #ffdd44;
+    width: 10px;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.progress-step {
+    /* position: absolute; */
+    position: relative;
+    margin-left: 25px;
+    width: 100%;
+    display: block;
+
+}
+
+.progress-step::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    margin-left: -30px;
+    width: 15px;
+    height: 15px;
+    border-radius: 1em;
+    background-color: #ffdd44;
+    border: 2px solid #ffdd44;
+}
+
+
+
 @media only screen and (max-width: 900px) {
     /* ALL PROJECTS */  
     .project-card {
