@@ -32,6 +32,7 @@ window.addEventListener('scroll', function headerShadow() {
 //////////////////// PROJECT PROGRESS BAR ///////////////////////////
 
 const distanceArray = [];
+const differenceArray = [];
 
 const caseStudyTitle = document.getElementsByTagName('h4');
 const progressStep = document.getElementsByClassName('progress-step');
@@ -44,8 +45,24 @@ for (var i = 0; i < caseStudyTitle.length; i ++) {
         return { top: elRect.top + scrollT }
     }
     const progressStepOffset = offset(caseStudyTitle[i]);
+
     distanceArray.push(progressStepOffset.top);
+    if (i < caseStudyTitle.length - 1) {
+        const progressStepOffsetPlus = offset(caseStudyTitle[i+1]);
+        differenceArray.push(progressStepOffsetPlus.top - progressStepOffset.top);
+    }
 }  
+
+const totalDifferenceArray = differenceArray.reduce((a, b) => a + b);
+
+for (var m = 1; m < differenceArray.length; m ++) {
+    const percentage = differenceArray[m]/totalDifferenceArray*100;
+    for (var n = m; n > 0; n --) {
+        // console.log('x');
+    }
+    progressStepLabel[m].style.top = percentage + "%";
+}
+
 
 window.onscroll = function () {
     for (var j = 0; j < caseStudyTitle.length; j ++) {
@@ -55,12 +72,10 @@ window.onscroll = function () {
             progressStepLabel[j].style.fontWeight = "700";
             for (var k = 0; k < caseStudyTitle.length; k ++) {
                 if (k !== j) {
-                    if (progressStep[k] == undefined) {
-
-                    } else {
-                    progressStep[k].style.transform = "scale(1)";
-                    progressStep[k].style.backgroundColor = "#ffdd44";
-                    progressStepLabel[k].style.fontWeight = "400";
+                    if (progressStep[k] !== undefined) {
+                        progressStep[k].style.transform = "scale(1)";
+                        progressStep[k].style.backgroundColor = "#ffdd44";
+                        progressStepLabel[k].style.fontWeight = "400";
                     }
                 }
             }
@@ -68,10 +83,18 @@ window.onscroll = function () {
     }
 }
 
-// // example use
-// var div = document.querySelector('div');
-// var divOffset = offset(div);
-// console.log(divOffset.top);
+function progressAnchor(n) {
+    window.scrollTo(0, distanceArray[n] - 80)
+};
+
+// window.addEventListener("hashchange", function () {
+// function addscroll() {
+//     // window.scrollBy(0, 100);
+//     setTimeout(function () {
+//         window.scrollBy(0, -100);
+//     }, 300);
+//     console.log('bu')
+// };
 
 
 

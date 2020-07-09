@@ -5,6 +5,7 @@
     margin: 0;
     font-family: 'Muli', sans-serif;
     color: black;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -377,7 +378,7 @@ figcaption p {
 
 /* PROJECT PAGE */
 .banner-image {
-    width: calc(100vw);
+    width: calc(100% + 6em);
     margin-left: -3em;
     height: 33vh;
     object-fit: cover;
@@ -406,12 +407,14 @@ figcaption p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
+    white-space: nowrap;
 
 }
 
-label {
+.progress-step-label {
     display: inline-block;
-    position: relative;
+    position: absolute;
     margin-left: 26px;
 }
 
