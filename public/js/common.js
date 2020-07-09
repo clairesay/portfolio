@@ -29,6 +29,24 @@ window.addEventListener('scroll', function headerShadow() {
     }
 })
 
+////////////////// MEDIA QUERY SET ////////////////////////////
+// var sixHundredMode;
+// function mediaQueryChecker(x) {
+//     if (x.matches) { // If media query matches
+//       document.body.style.backgroundColor = "yellow";
+//       sixHundredMode = true;
+//     } else {
+//       document.body.style.backgroundColor = "pink";
+//       sixHundredMode = false;
+//     }
+//     console.log(sixHundredMode);
+// }
+  
+// const mediaSixHundred = window.matchMedia("(max-width: 600px)");
+// mediaQueryChecker(mediaSixHundred); // Call listener function at run time
+// mediaSixHundred.addListener(mediaQueryChecker); // Attach listener function on state changes
+
+
 //////////////////// PROJECT PROGRESS BAR ///////////////////////////
 
 const distanceArray = [];
@@ -66,7 +84,15 @@ for (var m = 1; m < differenceArray.length; m ++) {
         previousPercentageArray.push(differenceArray[m - n]/totalDifferenceArray*100);
     
     }
-    progressStepLabel[m].style.top = previousPercentageArray.reduce((a, b) => a + b) + "%";
+
+    // if (sixHundredMode == true) {
+    //     progressStepLabel[m].style.top = 0;
+    //     progressStepLabel[m].style.left = previousPercentageArray.reduce((a, b) => a + b) + "%";
+    // } else {
+        progressStepLabel[m].style.top = previousPercentageArray.reduce((a, b) => a + b) + "%";
+        // progressStepLabel[m].style.left = 0;
+    // }
+
     previousPercentageArray.length = 0;
 }
 
@@ -92,15 +118,3 @@ window.onscroll = function () {
 function progressAnchor(n) {
     window.scrollTo(0, distanceArray[n] - 80)
 };
-
-// window.addEventListener("hashchange", function () {
-// function addscroll() {
-//     // window.scrollBy(0, 100);
-//     setTimeout(function () {
-//         window.scrollBy(0, -100);
-//     }, 300);
-//     console.log('bu')
-// };
-
-
-

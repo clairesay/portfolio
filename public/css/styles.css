@@ -386,13 +386,18 @@ figcaption p {
 
 .case-study {
     display: grid;
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 230px 1fr;
 
     padding: 2em;
     padding-top: 0;
+
 }
 
 /* PROJECT PAGE - PROGRESS BAR */
+.case-progress {
+    margin-top: 0.5em;
+}
+
 #progress-bar {
     /* background-color: #ffdd44; */
     display: inline-block;
@@ -400,7 +405,7 @@ figcaption p {
     min-height: 200px;
     max-height: 250px;
     position: sticky;
-    top: calc(72px + 1em);
+    top: calc(72px + 2em);
     background-color: #ffdd44;
     width: 6px;
     border-radius: 1em;
@@ -409,7 +414,6 @@ figcaption p {
     justify-content: space-between;
     
     white-space: nowrap;
-
 }
 
 .progress-step-label {
@@ -455,6 +459,13 @@ figcaption p {
         /* width: calc(46vw - 2em);
         height: calc(46vw - 2em); */
     } 
+
+    /* PROJECT */
+
+    .case-study {
+        grid-template-columns: 180px 1fr;
+        margin-left: 0;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -502,6 +513,27 @@ figcaption p {
         margin: 1em 0; */
         /* height: 100%; */
     }
+
+    .case-progress {
+        display: none;
+    }
+
+    .case-study {
+        grid-template-columns: 1fr;
+        padding: 0 0.75em;
+    }
+
+
+    /* PROJECTS */
+    /* #progress-bar {
+        top: calc(108px + 2em);
+        height: 6px;
+        max-height: 6px;
+        min-height: 6px;
+        width: 40vh;
+        min-width: 200px;
+        max-width: 250px;
+    } */
 
     /* CONTACT ME */
     #profile {
