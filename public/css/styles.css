@@ -396,36 +396,53 @@ figcaption p {
     /* background-color: #ffdd44; */
     display: inline-block;
     height: 40vh;
+    min-height: 200px;
+    max-height: 250px;
     position: sticky;
     top: calc(72px + 1em);
     background-color: #ffdd44;
-    width: 10px;
+    width: 6px;
     border-radius: 1em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+}
+
+label {
+    display: inline-block;
+    position: relative;
+    margin-left: 26px;
 }
 
 .progress-step {
     /* position: absolute; */
-    position: relative;
-    margin-left: 25px;
-    width: 100%;
-    display: block;
-
-}
-
-.progress-step::before {
-    content: '';
-    display: inline-block;
     position: absolute;
+    display: inline-block;
+    width: 100%;
+    display: flex;
+    /* display: block; */
     margin-left: -30px;
-    width: 15px;
-    height: 15px;
+    margin-top: 2px;
+    width: 8px;
+    height: 8px;
     border-radius: 1em;
     background-color: #ffdd44;
-    border: 2px solid #ffdd44;
+    border: 3px solid #ffdd44;
+    transform: scale(1);
+
+    transition: all 0.2s ease-in-out;
 }
+
+
+
+/* .progress-step::after {
+    content: 'Brief';
+    display: inline-block;
+    position: absolute;
+    margin-left: 25px;
+    margin-top: -3px;
+} */
 
 
 
