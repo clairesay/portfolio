@@ -33,6 +33,7 @@ window.addEventListener('scroll', function headerShadow() {
 
 const distanceArray = [];
 const differenceArray = [];
+const previousPercentageArray = [];
 
 const caseStudyTitle = document.getElementsByTagName('h4');
 const progressStep = document.getElementsByClassName('progress-step');
@@ -56,12 +57,19 @@ for (var i = 0; i < caseStudyTitle.length; i ++) {
 const totalDifferenceArray = differenceArray.reduce((a, b) => a + b);
 
 for (var m = 1; m < differenceArray.length; m ++) {
-    const percentage = differenceArray[m]/totalDifferenceArray*100;
+    // percentage is the %distance between this and the previous header
+    // const percentage = differenceArray[m]/totalDifferenceArray*100;
+    // for all of n is equal to m, n is greater than 0
     for (var n = m; n > 0; n --) {
-        // console.log('x');
+        // add new numbers into the previous percentage array
+        // push all of the percentage values
+        previousPercentageArray.push(differenceArray[m - n]/totalDifferenceArray*100);
+    
     }
-    progressStepLabel[m].style.top = percentage + "%";
+    progressStepLabel[m].style.top = previousPercentageArray.reduce((a, b) => a + b) + "%";
+    previousPercentageArray.length = 0;
 }
+
 
 
 window.onscroll = function () {
@@ -71,12 +79,10 @@ window.onscroll = function () {
             progressStep[j].style.transform = "scale(1.5)";
             progressStepLabel[j].style.fontWeight = "700";
             for (var k = 0; k < caseStudyTitle.length; k ++) {
-                if (k !== j) {
-                    if (progressStep[k] !== undefined) {
-                        progressStep[k].style.transform = "scale(1)";
-                        progressStep[k].style.backgroundColor = "#ffdd44";
-                        progressStepLabel[k].style.fontWeight = "400";
-                    }
+                if ((k !== j) && (progressStep[k] !== undefined)) {
+                    progressStep[k].style.transform = "scale(1)";
+                    progressStep[k].style.backgroundColor = "#ffdd44";
+                    progressStepLabel[k].style.fontWeight = "400";
                 }
             }
         }
