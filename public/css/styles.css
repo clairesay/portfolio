@@ -480,6 +480,10 @@ textarea {
     margin: 0 1em;
 }
 
+.case-information h4 {
+    margin-top: 1em;
+}
+
 /* PROJECT PAGE - PROGRESS BAR */
 .case-progress {
     margin-top: 0.5em;
