@@ -27,6 +27,21 @@ body {
     min-height: 100vh;
 }
 
+/* SPANS */
+.number {
+    font-size: 36px;
+    color: #ffdd44;
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+}
+
+.date {
+    font-weight: 300;
+    color: #999999;
+}
+
 /* GLOBAL */
 #home-link {
     font-weight: 800;
@@ -423,7 +438,7 @@ figcaption p {
     opacity: 0;
     transition: all 0.1s ease-in-out;
     background-color: #ffdd44;
-    color: black;
+    color: #555555;
     border-radius: 2px;
     font-weight: 600;
 }
@@ -469,6 +484,8 @@ textarea {
     margin-left: -3em;
     height: 33vh;
     object-fit: cover;
+
+    filter: brightness(0.8);
 }
 
 .case-study {
@@ -480,8 +497,34 @@ textarea {
     margin: 0 1em;
 }
 
-.case-information h4 {
+.case-information h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.case-information h2 {
+    margin-bottom: 0.25em;
     margin-top: 1em;
+}
+
+.figure-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.hearts.problem-highlight {
+    width: 45%;
+    position: inline-block;
+    display: flex;
+    align-items: center;
+    /* flex-direction:; column */
+}   
+
+.hearts.problem-highlight img {
+    width: 30%;
+    height: auto;
+    align-self: center;
 }
 
 /* PROJECT PAGE - PROGRESS BAR */
@@ -511,6 +554,9 @@ textarea {
     display: inline-block;
     position: absolute;
     margin-left: 26px;
+
+    font-size: 16px;
+    /* text-transform: uppercase; */
 }
 
 .progress-step-label:hover {

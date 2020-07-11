@@ -1,6 +1,6 @@
 //////////////// DYNAMICALLY CREATING PROGRESS BAR LINKS //////////////////////
 
-const caseStudyTitle = document.getElementsByTagName('h4');
+const caseStudyTitle = document.getElementsByTagName('h2');
 
 for (var h = 0; h < caseStudyTitle.length - 1; h ++) {
     const progressBar = document.getElementById('progress-bar');
