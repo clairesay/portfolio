@@ -17,6 +17,8 @@ const captionP = document.querySelectorAll('figcaption p');
 
 //////////////////// TOP DROP SHADOW ////////////////////////////
 const header = document.getElementsByTagName('header')[0];
+const dropDown = document.getElementById('drop-down');
+// const allProjects = document.getElementsByClassName('nav-link')[0];
 const body = document.getElementsByTagName('div')[0];
 
 window.addEventListener('scroll', function headerShadow() {
@@ -28,6 +30,26 @@ window.addEventListener('scroll', function headerShadow() {
         header.style.boxShadow = "0 4px 2px -2px transparent"
     }
 })
+
+const addBefore = document.getElementById('add-before');
+
+dropDown.addEventListener('mouseenter', function () {
+    addBefore.style.opacity = "1"
+})
+
+dropDown.addEventListener('mouseleave', function () {
+
+    addBefore.style.opacity = "0"
+})
+
+
+// if (dropDown.classList.contains('white')) {
+//     dropDown.style.boxShadow = "0 0px 5px #e7e7e7"
+
+// } else if (dropDown.classList.contains('yellow')) {
+//     dropDown.style.boxShadow = "0 0px 5px #e7ca4a"
+
+// }
 
 ////////////////// MEDIA QUERY SET ////////////////////////////
 // var sixHundredMode;

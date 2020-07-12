@@ -12,6 +12,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    cursor: pointer;
+}
+
 h1 {
     font-weight: 800;
     font-size: 32px;
@@ -56,7 +60,7 @@ body {
     grid-area: HomeLink;
     transform-origin: center center;
     transform: translateX(0);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.45s ease-in-out;
     /* background-color: #ffdd44; */
     /* padding: 0; */
     border: 2px solid white;
@@ -64,6 +68,7 @@ body {
 
 #home-link:hover {
     /* transform: scale(1.02); */
+    transition-duration: 0.2s;
     transform: translateX(-0.2em);
     padding: 0.2em;
 }
@@ -107,7 +112,7 @@ body {
 
 .landing {
     padding: 2em;
-    padding-top: 72px;
+    padding-top: 96px;
     border-radius: 0 0 7px 7px;
 }
 
@@ -135,6 +140,11 @@ header a {
     font-weight: 600;
 }
 
+header > a.nav-link {
+    margin: 0;
+    padding: 24px;
+}
+
 .nav-link.w:nth-of-type(n):hover::before {
     background-color: white;
 }
@@ -151,12 +161,89 @@ header a {
     margin: auto 0.5em auto 0;
     border-radius: 1em;
     background-color: transparent;
+    transition: background-color 0.45s ease-in-out;
+}
 
-    transition: background-color 0.2s ease-in-out;
+.nav-link:hover::before {
+    transition-duration: 0.2s;
 }
 
 .nav-link:nth-of-type(2) {
     grid-area: AllProjects;
+}
+
+/* #add-before {
+    position: absolute;
+    color: transparent;
+} */
+
+#add-before {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    width: 12px;
+    height: 12px;
+    min-width: 12px;
+    margin: 6px 0.5em auto 0;
+    border-radius: 1em;
+    /* background-color: white; */
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    /* visibility: hidden; */
+    /* border: 2px solid blue; */
+}
+
+header.white #drop-down {
+    background-color: #ffdd44;
+    box-shadow:0 0px 5px #e7ca4a;
+}
+
+#drop-down {
+    visibility: hidden;
+    position: absolute;
+    top: 60px;
+    right: 92px;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow:0 0px 5px #e7e7e7;
+}
+
+#drop-down .nav-link::before {
+    transition-duration: 0.2s
+}
+
+/* #drop-down .nav-link:hover::before {
+    transition-duration: 0.2s
+} */
+
+#drop-down a {
+    margin: 0;
+    padding: 1.5em;
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 1em;
+}
+
+#drop-down a.nav-link:nth-of-type(3) {
+    padding-top: 0;
+}
+
+#drop-down a.nav-link:first-of-type {
+    display: none;
+}
+
+#drop-down a.nav-link::before {
+    height: 10px;
+    width: 10px;
+    min-width: 10px;
+}
+
+.nav-link:nth-of-type(2):hover ~ #drop-down, #drop-down:hover {
+    visibility: visible;
+    opacity: 1;
+    /* position: absolute; */
 }
 
 .nav-link:nth-of-type(3) {
@@ -489,7 +576,7 @@ textarea {
     margin-left: -3em;
     height: 33vh;
     object-fit: cover;
-    object-position: 0 -230px;
+    /* object-position: 0 -230px; */
 
     filter: brightness(0.8);
 }
@@ -717,6 +804,7 @@ figcaption.for-image {
     .case-study {
         grid-template-columns: 1fr;
         padding: 0 5%;
+        margin: 0;
         /* padding-left:  */
     }
 
@@ -738,21 +826,57 @@ figcaption.for-image {
         border-radius: 0 0 7px 7px;
     }
 
+    header > a.nav-link {
+        margin-top: 0;
+        margin: 0 24px auto 24px;
+        padding: 0;
+    }
+
     .nav-link:nth-of-type(2) {
         display: flex;
         justify-self: flex-end;
+    }
+
+    #drop-down {
+        width: 100%;
+        top: 92px;
+        left: 0;
+        right: auto;
+        display: flex;
+        justify-content: space-around;
+        border-radius: 0 0 7px 7px;
+        box-shadow:0 4px 2px -2px #e7e7e7;
+        border-top: 12px solid #ffdd44;
+    }
+
+    header.white #drop-down {
+        border-top: 12px solid white;
+        /* background-color: #ffdd44; */
+        box-shadow: 0 4px 2px -2px #e7ca4a;
+    }
+
+    #drop-down a.nav-link:nth-of-type(3) {
+        padding-top: 1.5em;
+    }
+
+    #add-before {
+        margin-top: 4px;
     }
 
     #home-link {
         margin: auto;
     }
 
+    #home-link:hover {
+        transform: translateX(-0.1em);
+    }
+
     .nav-link {
-        margin-top: 0;
+
     }
 
     .landing {
-        padding-top: 108px;
+        padding-top: 132px;
     }
 
     /* INDEX */
@@ -844,6 +968,10 @@ figcaption.for-image {
 
     .email-address {
         display: none;
+    }
+
+    .details {
+        /* padding: 1em 0.5em; */
     }
 
     /* INDEX */
