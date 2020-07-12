@@ -112,7 +112,7 @@ body {
 
 .landing {
     padding: 2em;
-    padding-top: 96px;
+    padding-top: 72px;
     border-radius: 0 0 7px 7px;
 }
 
@@ -352,6 +352,7 @@ footer .social-icon:hover::after {
     height: 50%;
     object-fit: cover;
     border-radius: 7px;
+    box-shadow: 0 0 0.2em #e7e7e7;
 }
 
 .peek:nth-of-type(2) img {
@@ -574,7 +575,7 @@ textarea {
 .banner-image {
     width: calc(100% + 6em);
     margin-left: -3em;
-    height: 33vh;
+    height: 40vh;
     object-fit: cover;
     /* object-position: 0 -230px; */
 
@@ -660,6 +661,10 @@ p ~ h3 {
 
 .hearts.problem-highlight article {
     margin-left: 2em;
+}
+
+figure {
+    padding: 1em 0 1.5em 0;
 }
 
 figcaption.for-image {
