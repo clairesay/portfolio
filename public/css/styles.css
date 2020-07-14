@@ -734,13 +734,13 @@ figcaption.for-image {
     box-shadow: 0 0 10px #aaaaaa;
 }
   #next {
-      left: calc(100% - 2.5em);
+      left: calc(100% - 3em);
       visibility: visible;
       opacity: 1;
   }
 
   #previous {
-      left: -0.5em;
+      left: -1em;
       visibility: hidden;
       opacity: 0;
   }
@@ -777,7 +777,7 @@ figcaption.for-image {
   }
   .slider > a:focus {
     background: #000;
-  }s
+  }
 
 /* PROJECT PAGE - PROGRESS BAR */
 .case-progress {
