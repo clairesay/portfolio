@@ -667,6 +667,10 @@ figure {
     padding: 1em 0 1.5em 0;
 }
 
+.subtle-shadow {
+    box-shadow: 0 0 5px #e7e7e7;
+}
+
 figcaption.for-image {
     display: block;
     position: relative;
@@ -676,7 +680,104 @@ figcaption.for-image {
     font-style: italic;
     font-size: 14px;
     padding: 0;
+    margin-top: 1em;
 }
+
+.image-row-wrapper {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.image-row-wrapper img{
+    width: 95%;
+    height: auto;
+    object-fit: contain;
+}
+
+.image-row-wrapper > img {
+    width: 48%;
+}
+
+/* SLIDE CARDS IN THE PROJECT PAGE */
+.slide-cards {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+    padding: 1em 1.5em;
+}
+
+.slide-cards::-webkit-scrollbar {
+    height: 0px;
+}
+
+.slide-cards div {
+    /* width: 200%; */
+    min-width: 98%;
+    padding:0 0.5em;
+
+    scroll-snap-align: center;
+    transform-origin: center center;
+    /* transform: scale(1); */
+    /* transition: transform 0.5s; */
+    position: relative;
+}
+
+.slide-cards img {
+    box-shadow: 0 0 10px #aaaaaa;
+}
+  #next {
+      left: calc(100% - 2.5em);
+      visibility: visible;
+      opacity: 1;
+  }
+
+  #previous {
+      left: -0.5em;
+      visibility: hidden;
+      opacity: 0;
+  }
+
+  #next, #previous {
+    display: inline-flex;
+    width: 48px;
+    height: 48px;
+    color: black;
+    font-weight: 800;
+    font-size: 24px;
+    text-align: center;
+    position: relative;
+    /* top: 10px; */
+    bottom: 40px;
+    border-radius: 50%;
+    background-color: #ffdd44 ;
+
+    vertical-align: middle;
+    filter: drop-shadow(0px 0px 2px #ffdd44);
+    transition: all 0.2s ease-in-out;
+  }
+
+  #next svg, #previous svg {
+      transform: scale(0.45);
+  }
+
+  #next:hover, #previous:hover {
+    filter: drop-shadow(0px 0px 6px #e7ca4a);
+  }
+
+  .slider > a:active {
+    top: 1px;
+  }
+  .slider > a:focus {
+    background: #000;
+  }s
 
 /* PROJECT PAGE - PROGRESS BAR */
 .case-progress {
@@ -732,8 +833,6 @@ figcaption.for-image {
 
     transition: all 0.2s ease-in-out;
 }
-
-
 
 /* .progress-step::after {
     content: 'Brief';
