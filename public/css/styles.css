@@ -652,6 +652,7 @@ p ~ h3 {
 .hearts.problem-highlight p {
     /* display: flex;
     flex-direction: column; */
+    font-size: 14px;
 }
 
 .hearts.problem-highlight img {
@@ -857,27 +858,48 @@ figcaption.for-image {
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
 }
 
 #modal button {
     position: absolute;
     right: 10vw;
-    top: calc(10vh - 24px);
+    /* top: calc(10vh - 24px); */
     font-size: 14px;
     font-weight: 600;
-    background-color: #ffdd44;
-    color: #555555;
+    /* background-color: #ffdd44; */
+    background-color: transparent;
+    color: white;
     border: none;
     border-radius: 2px;
     padding: 0.5em 1em;
 }
 
+/* #modal button::before {
+    content: '';
+    display: inline-block;
+    background-color: #ffdd44;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: auto 0.5em auto 0;
+} */
+
 #modal img {
     max-width: 80vw;
     max-height: 80vh;
     margin: auto;
-    margin-top: 12vh;
+    /* margin-top: 12vh; */
     object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+#modal figcaption {
+    color: white;
+    position: absolute;
+    /* text-align: center; */
 }
 
 /* ALL IMAGES PREP FOR ZOOMING */
@@ -1066,6 +1088,19 @@ img.zoom:hover {
         max-width: 250px;
     } */
 
+    /* PROJECTS */
+
+    #next, #previous {
+        width: 36px;
+        height: 36px;
+    }
+
+    #next svg, #previous svg {
+        height: 30;
+        margin-top: -6px;
+        transform: scale(0.4);
+    }
+
     .case-study {
         padding: 0 1em;
     }
@@ -1129,5 +1164,11 @@ img.zoom:hover {
     .peek img {
         margin-bottom: 175px;
     }
+
+    /* PROJECTS */
+    .hearts.problem-highlight article {
+        margin-left: 1em;
+    }
+
 }
 

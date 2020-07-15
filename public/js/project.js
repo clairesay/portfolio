@@ -123,11 +123,9 @@ previous.style.visibility = "hidden";
 
 slideCards.addEventListener('scroll', function () {
     if (slideCards.scrollLeft < 50) {
-        console.log('yep')
         previous.style.visibility = "hidden";
         previous.style.opacity = "0";
     } else if (slideCards.scrollLeft > scrollLimit - 50) {
-        console.log('drean')
         next.style.visibility = "hidden";
         next.style.opacity = "0";
     } else {
@@ -152,21 +150,57 @@ function slideFunction(n) {
 const allImages = document.querySelectorAll('img.zoom');
 const modal = document.getElementById('modal');
 const modalImage = document.querySelectorAll('#modal img')[0];
+const modalButton = document.querySelectorAll('#modal button')[0];
+// const modalAltText = document.querySelectorAll('#modal figcaption.for-image')[0];
+
 var modalToggle = false;
 
-for (var p = 1; p < allImages.length; p++) {
+for (var p = 0; p < allImages.length; p++) {
+
+    // allImages[p].
+
     allImages[p].addEventListener('click', function () {
         modal.style.visibility = "visible";
-        modalImage.setAttribute('src', this.src)
+        modal.style.opacity = "1";
+        modalImage.style.opacity = "1";
+        modalImage.setAttribute('src', this.src);
+        // modalAltText.innerHTML = this.alt;
+
+        document.getElementsByTagName('body')[0].style.overflow = "hidden";
+
+        var buttonTop = (window.innerHeight - modalImage.clientHeight)/2;
+        var buttonRight = (window.innerWidth - modalImage.clientWidth)/2;
+        // console.log((window.innerHeight - modalImage.clientHeight)/2)
+        modalButton.style.top = 'calc(' + buttonTop + 'px - 2.5em)';
+        modalButton.style.right = 'calc(' + buttonRight + 'px - 1em)';
+
+        // modalAltText.style.bottom = 'calc(' + buttonTop + 'px - 2.5em)';
+        // modalAltText.style.left = 'calc(' + buttonRight + 'px)';
+        // console.log(/)
         modalToggle = true;
     })
 }
 
+window.addEventListener('resize', function() {
+    var buttonTop = (window.innerHeight - modalImage.clientHeight)/2;
+    var buttonRight = (window.innerWidth - modalImage.clientWidth)/2;
+    // console.log((window.innerHeight - modalImage.clientHeight)/2)
+    modalButton.style.top = 'calc(' + buttonTop + 'px - 2.5em)';
+    modalButton.style.right = 'calc(' + buttonRight + 'px - 1em)';
+})
+
 modal.addEventListener('click', function(event) {
     var isClickInside = modalImage.contains(event.target);
     if ((!isClickInside) && (window.getComputedStyle(modal).visibility === "visible") && (modalToggle = true)) {
+        document.getElementsByTagName('body')[0].style.overflow = "auto";
         modal.style.visibility = "hidden";
+        modal.style.opacity = "0";
+        modalImage.style.opacity = "0";
         modalImage.setAttribute('src', '')
         modalToggle = false;
     }
 });
+
+// MODAL BUTTON
+
+
