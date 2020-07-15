@@ -802,6 +802,7 @@ figcaption.for-image {
     justify-content: space-between;
     
     white-space: nowrap;
+    /* padding-top: 2em; */
 }
 
 .progress-step-label {
@@ -829,7 +830,7 @@ figcaption.for-image {
     width: 8px;
     height: 8px;
     border-radius: 1em;
-    /* background-color: #ffdd44; */
+    background-color: #ffdd44;
     border: 3px solid #ffdd44;
     transform: scale(1);
 

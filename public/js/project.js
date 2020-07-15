@@ -22,6 +22,8 @@ for (var h = 0; h < caseStudyTitle.length - 1; h ++) {
 }
 
 
+document.getElementsByClassName('progress-step-label')[0].style.top = '-0.75em';
+
 
 //////////////////// PROJECT PROGRESS BAR ///////////////////////////
 
