@@ -25,6 +25,10 @@ h3 {
     font-weight: 600;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 body {
     position: relative;
     margin: 0 1em;
@@ -667,6 +671,10 @@ figure {
     padding: 1em 0 1.5em 0;
 }
 
+figure figure {
+    padding: 0;
+}
+
 .subtle-shadow {
     box-shadow: 0 0 5px #e7e7e7;
 }
@@ -711,7 +719,7 @@ figcaption.for-image {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
 
-    padding: 1em 1.5em;
+    padding: 1.5em 1.5em 0 1.5em;
 }
 
 .slide-cards::-webkit-scrollbar {
@@ -755,7 +763,7 @@ figcaption.for-image {
     text-align: center;
     position: relative;
     /* top: 10px; */
-    bottom: 40px;
+    bottom: 20px;
     border-radius: 50%;
     background-color: #ffdd44 ;
 
@@ -770,13 +778,6 @@ figcaption.for-image {
 
   #next:hover, #previous:hover {
     filter: drop-shadow(0px 0px 6px #e7ca4a);
-  }
-
-  .slider > a:active {
-    top: 1px;
-  }
-  .slider > a:focus {
-    background: #000;
   }
 
 /* PROJECT PAGE - PROGRESS BAR */
@@ -841,6 +842,48 @@ figcaption.for-image {
     margin-left: 25px;
     margin-top: -3px;
 } */
+
+/* IMAGE ZOOM IN MODAL */
+#modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 100;
+    visibility: hidden;
+    /* display: none; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#modal button {
+    position: absolute;
+    right: 10vw;
+    top: calc(10vh - 24px);
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #ffdd44;
+    color: #555555;
+    border: none;
+    border-radius: 2px;
+    padding: 0.5em 1em;
+}
+
+#modal img {
+    max-width: 80vw;
+    max-height: 80vh;
+    margin: auto;
+    margin-top: 12vh;
+    object-fit: contain;
+}
+
+/* ALL IMAGES PREP FOR ZOOMING */
+img.zoom:hover {
+    cursor: zoom-in;
+}
 
 @media only screen and (max-width: 1080px) {
     .case-information {

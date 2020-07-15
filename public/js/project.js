@@ -146,3 +146,27 @@ function slideFunction(n) {
         slideCards.scrollBy(-200, 0)
     }
 }
+
+
+// ///////////// IMAGE ZOOM IN /////////////////////////
+const allImages = document.querySelectorAll('img.zoom');
+const modal = document.getElementById('modal');
+const modalImage = document.querySelectorAll('#modal img')[0];
+var modalToggle = false;
+
+for (var p = 1; p < allImages.length; p++) {
+    allImages[p].addEventListener('click', function () {
+        modal.style.visibility = "visible";
+        modalImage.setAttribute('src', this.src)
+        modalToggle = true;
+    })
+}
+
+modal.addEventListener('click', function(event) {
+    var isClickInside = modalImage.contains(event.target);
+    if ((!isClickInside) && (window.getComputedStyle(modal).visibility === "visible") && (modalToggle = true)) {
+        modal.style.visibility = "hidden";
+        modalImage.setAttribute('src', '')
+        modalToggle = false;
+    }
+});
