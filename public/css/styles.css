@@ -40,6 +40,12 @@ body {
     text-decoration: underline;
 }
 
+iframe {
+    padding-top: 1em;
+    width: 100%;
+    border: none;
+}
+
 /* SPANS */
 .number {
     font-size: 36px;

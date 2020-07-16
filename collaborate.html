@@ -24,7 +24,7 @@
             <a class="nav-link y" href="contact-me.html">contact.me</a>
         </header>
         <section class="landing white">
-            <img class="banner-image" src="public/images/3dhearts/exploration-desktop.PNG">
+            <img class="banner-image" src="public/images/collaborate/collaborate-banner.png">
         </section>
         <section class="case-study">
             <article class="case-progress">
@@ -77,7 +77,7 @@
         </br>
             <p>After completing both activities, we asked participants to explain what their creations represented and how they felt about their experiences. A facilitator, either myself or a research team member, would also ask questions to keep conversation flowing amongst participants.</p>
         </br>
-            <p>The key to gathering insights during these sessions were to listen to the stories the participants had to tell, rather than the physical creations that they had made. We felt the sessions were highly successful due to the intensity of conversation attained.</p>
+            <p>The key to gathering insights during these sessions were to listen to the stories the participants had to tell, rather than the physical creations that they had made. We felt the sessions were highly successful due to the level of conversation attained.</p>
             
             <h4>Interviews</h4>
             <p>We also organised phone interviews with charity representatives to understand the systemic side of things. Our list of questions was semi-structured, meaning we had key questions to ask, but also the potential to follow a tangent if the interviewee provided an interesting insight. This gave us the ability to go beyond a participant’s surface-level response, tapping into underlying motivations and frustrations. </p>
@@ -86,8 +86,11 @@
             
             <h4>Collating the Data</h4>
             <p>We ended up with an enormous amount of qualitative data, all voicing a diverse range of concerns from both donors and organisations collecting those donations. To make sense of it all, we shared the task of collecting similar expressions and forming statement cards, each containing highlighted quotes from the interview and context mapping transcripts. Each card was also given a summarised interpretation, which we used to make upper level distinctions.</p>
+            <iframe class="ratio" src="https://miro.com/app/embed/o9J_kpYyb1w=/?" frameborder="0" scrolling="no" allow="fullscreen"></iframe>
+            
             <h4>Research Visualisation</h4>
             <p>In order to make sense of our findings and share information with stakeholders, we developed a research visualisation which summarised the key insights. </p>
+            <iframe class="ratio" src="public/images/collaborate/collaborate-research-visualisation.pdf" frameborder="0" scrolling="no" allow="fullscreen"></iframe>
             <h2>Problem Space</h2>
         
             <p>From the research we had gathered, we found that donors were keen to support those in need, especially in times of crisis. However, many also expressed an underlying distrust for how charities handle donations, feeling their donations were not being used to support those most in need. </p>
@@ -96,8 +99,9 @@
         </br>
             <p class="quote">"We strive to ensure that individuals contributing to recovery efforts for victims of natural disasters can donate physical and financial goods with the confidence that their contributions are being utilised to bring about impactful change to affected communities. Providing a sense of trust between donors and charities as well as facilitating effective communication between them will lift the haze of uncertainty clouding donor mindset hence empowering them to make a productive impact in times of need."</p>
             <h2>Ideation</h2>
-            <p>Our brief called for an experience that considers both digital and spatial elements. We designed several experience concepts, storyboarding a scenario of how we perceived it to pan out. With a Pugh Selection Matrix, we whittled down our options to one, and enhanced the concept to meet the overarching brief, and our specialised brief. A part of the development process involved adding features we thought were important, taking some ideas from the discarded designs as well as removing superficial elements.</p>
-        
+            <p>The brief called for an experience that carefully considered both digital and spatial elements. Through design sprints, we came up with dozens of one-line ideas but pursued four to elaborate into experience concepts. We then storyboarded scenarios of how we perceived each to pan out.</p>
+        </br>
+            <p>With a Pugh Selection Matrix, we rated our concepts based on a selection of highly relevant criteria. Then we whittled our options down to one, based on the matrix score as well as our judgement on how well it responded to the briefs. A part of the development process involved adding features we thought were important, taking some ideas from the discarded designs as well as removing superficial elements.</p>
             <h2>Solution</h2>
             <p>Overall, the experience we chose to refine is Collaborate to Donate. With Leap Motion Sensing technology, users freely engage in the interaction with natural hand gestures, dragging and dropping donation items into a collection box for a fictional victim persona. The addition of the persona attempts to enhance the connection with positive change that donors felt they lacked when they chose to donate. Making charity efforts more personable helps to improve trust in organisations where transparency might be difficult otherwise.</p> 
             <p>Users are also given feedback for the donation choices they make – that is positive donations offer praise while negative donations give reasoning for why certain provisions are not helpful to those on the receiving end.</p>
@@ -125,4 +129,12 @@
     </body>
     <script src="public/js/common.js"></script>
     <script src="public/js/project.js"></script>
+    <script>
+        var ratio = document.getElementsByClassName('ratio');
+
+        for (var q = 0; q < ratio.length; q ++) {
+            ratio[q].style.height = 0.7*ratio[q].clientWidth + 'px';
+        }
+
+    </script>
 </html>

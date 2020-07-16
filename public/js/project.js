@@ -203,6 +203,8 @@ modal.addEventListener('click', function(event) {
     }
 });
 
-// MODAL BUTTON
+// RATIo
+
+
 
 
