@@ -157,57 +157,135 @@ const allImages = document.querySelectorAll('img.zoom');
 const modal = document.getElementById('modal');
 const modalImage = document.querySelectorAll('#modal img')[0];
 const modalButton = document.querySelectorAll('#modal button')[0];
-// const modalAltText = document.querySelectorAll('#modal figcaption.for-image')[0];
 
 var modalToggle = false;
+var zoomToggle;
 
+// listen for all the images with class zoom
+//if clicked, display image modal enabling zoom in
 for (var p = 0; p < allImages.length; p++) {
-
-    // allImages[p].
-
     allImages[p].addEventListener('click', function () {
         modal.style.visibility = "visible";
         modal.style.opacity = "1";
         modalImage.style.opacity = "1";
+        modalButton.style.opacity = "1";
         modalImage.setAttribute('src', this.src);
-        // modalAltText.innerHTML = this.alt;
 
         document.getElementsByTagName('body')[0].style.overflow = "hidden";
 
-        var buttonTop = (window.innerHeight - modalImage.clientHeight)/2;
-        var buttonRight = (window.innerWidth - modalImage.clientWidth)/2;
-        // console.log((window.innerHeight - modalImage.clientHeight)/2)
-        modalButton.style.top = 'calc(' + buttonTop + 'px - 2.5em)';
-        modalButton.style.right = 'calc(' + buttonRight + 'px - 1em)';
+        buttonPosition();
 
-        // modalAltText.style.bottom = 'calc(' + buttonTop + 'px - 2.5em)';
-        // modalAltText.style.left = 'calc(' + buttonRight + 'px)';
-        // console.log(/)
         modalToggle = true;
+        zoomToggle = localStorage.setItem('zoomToggle', 'false')
+        modalImage.style.cursor = "zoom-in"
     })
 }
 
 window.addEventListener('resize', function() {
-    var buttonTop = (window.innerHeight - modalImage.clientHeight)/2;
-    var buttonRight = (window.innerWidth - modalImage.clientWidth)/2;
-    // console.log((window.innerHeight - modalImage.clientHeight)/2)
-    modalButton.style.top = 'calc(' + buttonTop + 'px - 2.5em)';
-    modalButton.style.right = 'calc(' + buttonRight + 'px - 1em)';
+        modalImage.style.left = '';
+        modalImage.style.maxWidth = 80 + 'vw';
+        modalImage.style.maxHeight = 80 + 'vh';
+        buttonStyle('off');
+        buttonPosition();
+        modalImage.style.cursor = "zoom-in"
+        zoomToggle = localStorage.setItem('zoomToggle', 'false');
 })
 
 modal.addEventListener('click', function(event) {
-    var isClickInside = modalImage.contains(event.target);
-    if ((!isClickInside) && (window.getComputedStyle(modal).visibility === "visible") && (modalToggle = true)) {
-        document.getElementsByTagName('body')[0].style.overflow = "auto";
-        modal.style.visibility = "hidden";
-        modal.style.opacity = "0";
-        modalImage.style.opacity = "0";
-        modalImage.setAttribute('src', '')
-        modalToggle = false;
-    }
+        // general view (zoomed out)
+        if (localStorage.getItem('zoomToggle') === 'true') {
+            modalImage.style.maxWidth = 80 + 'vw';
+            modalImage.style.maxHeight = 80 + 'vh';
+            buttonStyle('off');
+            buttonPosition();
+        }
+
+        var isClickInside = modalImage.contains(event.target);
+
+        // if user clicks outside the modalImage
+        if ((!isClickInside) && (window.getComputedStyle(modal).visibility === "visible") && (modalToggle = true)) {
+            
+            document.getElementsByTagName('body')[0].style.overflow = "auto";
+
+            modal.style.visibility = "hidden";
+            modal.style.opacity = "0";
+            modalImage.style.opacity = "0";
+            modalButton.style.opacity = "0"
+
+            modalImage.setAttribute('src', '')
+            modalToggle = false;
+
+            modalImage.style.left = '';
+            buttonStyle('off');
+            zoomToggle = localStorage.setItem('zoomToggle', 'false');
+            modalImage.style.cursor = "zoom-in"
+
+        // else if user clicks inside the modalImage and the image is zoomed out
+        } else if ((isClickInside) && (localStorage.getItem('zoomToggle') === 'false')) {
+            
+            buttonPosition('special');
+            buttonStyle('on');
+
+            modalImage.style.maxWidth = modalImage.naturalWidth + 'px';
+            modalImage.style.maxHeight = 100 + '%';
+            modalImage.style.cursor = "zoom-out"
+
+            // BUTTONS
+
+            if (modalImage.clientWidth > window.innerWidth) {
+                modalImage.style.left = '0';
+            }
+
+            zoomToggle = localStorage.setItem('zoomToggle', 'true');
+
+        //else if user clicks inside the modalImage and the image is zoomed in
+        } else if ((isClickInside) && (localStorage.getItem('zoomToggle') === 'true')) {
+            modalImage.style.maxWidth = '80vw';
+            modalImage.style.maxHeight = '80vh';
+            modalImage.style.left = '';
+
+            buttonPosition();
+
+            zoomToggle = localStorage.setItem('zoomToggle', 'false');
+            buttonStyle('off');
+            modalImage.style.cursor = "zoom-in"
+        }
 });
 
-// RATIo
+// Setting the style for the buttons
+function buttonStyle(state) {
+    if (state == 'on') {
+        modalButton.style.backgroundColor = '#555555';
+        modalButton.style.border = '2px solid white';
+        modalButton.style.color = "white";
+        modalImage.setAttribute('class','in')
+        modalImage.removeAttribute('class', 'out')
+
+    } else if (state == 'off'){
+        modalButton.style.backgroundColor = 'transparent';
+        modalButton.style.border = 'none';
+        modalButton.style.color = 'white';
+        buttonPosition();
+        modalImage.setAttribute('class','out')
+        modalImage.removeAttribute('class', 'in')
+    }
+}
+
+// Setting the position of the button 
+function buttonPosition(state) {
+    var buttonTop = (window.innerHeight - modalImage.clientHeight)/2;
+    var buttonRight = (window.innerWidth - modalImage.clientWidth)/2;
+    modalButton.style.top = 'calc(' + buttonTop + 'px - 2.5em)';
+    modalButton.style.right = 'calc(' + buttonRight + 'px - 1em)';
+
+    if (state == 'special') {
+        console.log('yes')
+        modalButton.style.top = 15 + 'px';
+        modalButton.style.right = 15 + 'px';
+
+    }
+}
+
 
 
 

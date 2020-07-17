@@ -878,12 +878,13 @@ figcaption.for-image {
     justify-content: center;
     opacity: 0;
     transition: all 0.2s ease-in-out;
+    overflow: auto;
 }
 
 #modal button {
-    position: absolute;
+    position: fixed;
     right: 10vw;
-    /* top: calc(10vh - 24px); */
+    top: calc(10vh - 24px);
     font-size: 14px;
     font-weight: 600;
     /* background-color: #ffdd44; */
@@ -892,6 +893,7 @@ figcaption.for-image {
     border: none;
     border-radius: 2px;
     padding: 0.5em 1em;
+    z-index: 50;
 }
 
 /* #modal button::before {
@@ -905,6 +907,7 @@ figcaption.for-image {
 } */
 
 #modal img {
+    position: absolute;
     max-width: 80vw;
     max-height: 80vh;
     margin: auto;
@@ -912,7 +915,9 @@ figcaption.for-image {
     object-fit: contain;
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
+    overflow: auto;
 }
+
 
 #modal figcaption {
     color: white;

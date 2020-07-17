@@ -88,3 +88,33 @@ emailAddress.addEventListener('mouseout', function() {
         copyTip.innerHTML = "Copy"
     }, 200)
 })
+
+
+// modal.addEventListener('click', function(event) {
+//     var isClickInside = modalImage.contains(event.target);
+//     if ((!isClickInside) && (window.getComputedStyle(modal).visibility === "visible") && (modalToggle = true)) {
+//         document.getElementsByTagName('body')[0].style.overflow = "auto";
+//         modal.style.visibility = "hidden";
+//         modal.style.opacity = "0";
+//         modalImage.style.opacity = "0";
+//         modalImage.setAttribute('src', '')
+//         modalToggle = false;
+//     } else if ((isClickInside) && (imageZoom == false)) {
+        
+//         modal.style.overflow = 'auto'
+//         modalImage.style.width = 'auto';
+//         modalImage.style.maxWidth = modalImage.naturalWidth + 'px';
+//         modalImage.style.height = 'auto';
+
+//         var buttonTop = (window.innerHeight - modalImage.clientHeight)/2;
+//         var buttonRight = (window.innerWidth - modalImage.clientWidth)/2;
+//         modalButton.style.top = 'calc(' + buttonTop + 'px - 2.5em)';
+//         modalButton.style.right = 'calc(' + buttonRight + 'px - 1em)';
+
+//         if (modalImage.clientWidth > window.innerWidth) {
+//             modalImage.style.left = '0';
+//             modalButton.style.right = 'calc(' + buttonRight + 'px)';
+
+//         }
+//     }
+// });
