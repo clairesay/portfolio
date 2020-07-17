@@ -112,42 +112,42 @@ function progressAnchor(n) {
 
 // /////////////////////////////// RESTORE THIS ////////////////////////////////////////
 
-// var totalSlideCards = document.querySelectorAll('.slide-cards div');
+var totalSlideCards = document.querySelectorAll('.slide-cards div');
 
 
-// const slideCards = document.getElementsByClassName('slide-cards')[0];
-// const slideCardImageWidth = document.querySelectorAll('.slide-cards img')[0].clientWidth;
-// var scrollLimit = (totalSlideCards.length - 1)*slideCardImageWidth;
+const slideCards = document.getElementsByClassName('slide-cards')[0];
+const slideCardImageWidth = document.querySelectorAll('.slide-cards img')[0].clientWidth;
+var scrollLimit = (totalSlideCards.length - 1)*slideCardImageWidth;
 
-// var next = document.getElementById('next');
-// var previous = document.getElementById('previous');
+var next = document.getElementById('next');
+var previous = document.getElementById('previous');
 
-// var slideFunctionBaseNumber = 0;
-// previous.style.visibility = "hidden";
+var slideFunctionBaseNumber = 0;
+previous.style.visibility = "hidden";
 
-// slideCards.addEventListener('scroll', function () {
-//     if (slideCards.scrollLeft < 50) {
-//         previous.style.visibility = "hidden";
-//         previous.style.opacity = "0";
-//     } else if (slideCards.scrollLeft > scrollLimit - 50) {
-//         next.style.visibility = "hidden";
-//         next.style.opacity = "0";
-//     } else {
-//         previous.style.visibility = "visible";
-//         previous.style.opacity = "1";
-//         next.style.visibility = "visible";
-//         next.style.opacity = "1";
-//     }
-// }) 
+slideCards.addEventListener('scroll', function () {
+    if (slideCards.scrollLeft < 50) {
+        previous.style.visibility = "hidden";
+        previous.style.opacity = "0";
+    } else if (slideCards.scrollLeft > scrollLimit - 50) {
+        next.style.visibility = "hidden";
+        next.style.opacity = "0";
+    } else {
+        previous.style.visibility = "visible";
+        previous.style.opacity = "1";
+        next.style.visibility = "visible";
+        next.style.opacity = "1";
+    }
+}) 
 
-// function slideFunction(n) {
-//     slideFunctionBaseNumber += n;
-//     if (n > 0) {
-//         slideCards.scrollBy(200, 0);
-//     } else if (n < 0) {
-//         slideCards.scrollBy(-200, 0)
-//     }
-// }
+function slideFunction(n) {
+    slideFunctionBaseNumber += n;
+    if (n > 0) {
+        slideCards.scrollBy(200, 0);
+    } else if (n < 0) {
+        slideCards.scrollBy(-200, 0)
+    }
+}
 
 // //////////////////////////// RESTORE THIS //////////////////////////////////
 
@@ -256,7 +256,7 @@ modal.addEventListener('click', function(event) {
 function buttonStyle(state) {
     if (state == 'on') {
         modalButton.style.backgroundColor = '#555555';
-        modalButton.style.border = '2px solid white';
+        modalButton.style.border = '1px solid white';
         modalButton.style.color = "white";
         modalImage.setAttribute('class','in')
         modalImage.removeAttribute('class', 'out')

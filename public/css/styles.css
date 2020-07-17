@@ -41,7 +41,7 @@ body {
 }
 
 iframe, video {
-    margin-top: 1em;
+    margin: 1em 0;
     width: 100%;
     border: none;
 }
@@ -363,6 +363,13 @@ footer .social-icon:hover::after {
     object-fit: cover;
     border-radius: 7px;
     box-shadow: 0 0 0.2em #e7e7e7;
+
+    filter: grayscale(1);
+    transition: filter 0.2s ease-in-out;
+}
+
+.peek img:hover {
+    filter: grayscale(0);
 }
 
 .peek:nth-of-type(2) img {
@@ -694,7 +701,7 @@ figure figure {
 }
 
 .subtle-shadow {
-    box-shadow: 0 0 5px #e7e7e7;
+    box-shadow: 0 0 5px #aaaaaa;
 }
 
 figcaption.for-image {
@@ -724,6 +731,21 @@ figcaption.for-image {
 
 .image-row-wrapper > img {
     width: 48%;
+}
+
+.image-row-wrapper img:first-child {
+    margin-right: 1em;
+}
+
+.text-image-row-wrapper {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.text-image-row-wrapper img{
+    width: 30%;
 }
 
 /* SLIDE CARDS IN THE PROJECT PAGE */
