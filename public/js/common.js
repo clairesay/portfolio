@@ -1,13 +1,17 @@
 const allProjects = document.getElementsByClassName('nav-link')[0];
-const contactMe = document.getElementsByClassName('nav-link')[1];
+const hearts = document.getElementsByClassName('nav-link')[2];
+const collaborate = document.getElementsByClassName('nav-link')[3];
+const contactMe = document.getElementsByClassName('nav-link')[4];
 
 //checking for the path name
 const path = window.location.pathname;
 const page = path.split("/").pop();
 
 //highlighting the text to show the current page displayed
-if (page.includes('all-projects')) {
-    allProjects.style.fontWeight = "800";
+if (page.includes('3d-hearts')) {
+    hearts.style.fontWeight = "800";
+} else if (page.includes('collaborate')) {
+    collaborate.style.fontWeight = "800";
 } else if (page.includes('contact-me')) {
     contactMe.style.fontWeight = "800";
 }
@@ -89,6 +93,11 @@ emailAddress.addEventListener('mouseout', function() {
     }, 200)
 })
 
+//////////////////// WINDOW GO ////////////////////
+
+function go(link) {
+    window.location.href = link;
+}
 
 // modal.addEventListener('click', function(event) {
 //     var isClickInside = modalImage.contains(event.target);
@@ -118,3 +127,4 @@ emailAddress.addEventListener('mouseout', function() {
 //         }
 //     }
 // });
+
