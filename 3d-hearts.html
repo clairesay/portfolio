@@ -80,29 +80,42 @@
                 <h2>Research into Precedents</h2>
                 <!-- <p>Research into existing interactive anatomy learning platforms gave us a better understanding of details that were considered important in the medical context.</p> -->
                 <p>As we sought to understand existing 3D anatomy software for education, we realised the models were complex, layered and often generative. The standard to which <a class="external-link" href="https://www.primalpictures.com/">Primal Pictures</a> and <a class="external-link" href="https://www.biodigital.com/">BioDigital</a> present the models and the features they included seemed to be useful for specialist medical students.</p>
-                <figure>
-                <div class="image-row-wrapper">
-                    <figure>
-                        <img class="zoom" src="public/images/3dhearts/heart-research-1.png" alt="Highlighted regions of interest">
-                        <figcaption class="for-image">Highlighted regions of interest</figcaption>
+
+                <article class="slide-article">
+                    <figcaption class="for-image">Examples of anatomy learning from primalpictures.com and biodigital.com.</figcaption>
+                    <figure class="slide-cards" onscroll="slideCardFunction(0)">
+                        <div>
+                            <img class="zoom" src="public/images/3dhearts/heart-research-1.png" alt="Highlighted regions of interest">
+                            <figcaption class="for-image">Highlighted regions of interest</figcaption>
+                        </div>
+                        <div>
+                            <img class="zoom" src="public/images/3dhearts/heart-research-2.PNG" alt="Layering anatomical structures">
+                            <figcaption class="for-image">Layering anatomical structures</figcaption>
+                        </div>
+                        <div>
+                            <img class="zoom" src="public/images/3dhearts/heart-research-3.png">
+                            <figcaption class="for-image">Visualises movement of defect</figcaption>
+                        </div>
+                        <div>
+                            <img class="zoom" src="public/images/3dhearts/heart-research-4.PNG">
+                            <figcaption class="for-image">Accurate, relevant labelling</figcaption>
+                        </div>
                     </figure>
-                    <figure>
-                        <img class="zoom" src="public/images/3dhearts/heart-research-2.PNG" alt="Layering anatomical structures">
-                        <figcaption class="for-image">Layering anatomical structures</figcaption>
-                    </figure>
-                </div>
-                <div class="image-row-wrapper">
-                    <figure>
-                        <img class="zoom" src="public/images/3dhearts/heart-research-3.png">
-                        <figcaption class="for-image">Visualises movement of defect</figcaption>
-                    </figure>
-                    <figure>
-                        <img class="zoom" src="public/images/3dhearts/heart-research-4.PNG">
-                        <figcaption class="for-image">Accurate, relevant labelling</figcaption>
-                    </figure>
-                </div>
-                <figcaption class="for-image">Examples of anatomy learning from primalpictures.com and biodigital.com.</figcaption>
-            </figure>
+                
+                    <a class="previous" onclick="slideFunction(-1, 0)">
+                        <svg width="71" height="50" viewBox="0 0 71 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M66 7L14 43.5L66 80" stroke="white" stroke-width="15"/>
+                        </svg>
+                    </a>
+                    <a class="next" onclick="slideFunction(1, 0)">
+                        <svg width="71" height="50" viewBox="0 0 71 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 7L57 43.5L5 80" stroke="white" stroke-width="15"/>
+                        </svg>                        
+                    </a>
+                
+                </article>
+
+
                 <p><strong>We realised that not all of the above features would be helpful in the context we were designing and developing for </strong> – an introductory subject that did not require in-depth specialty knowledge of heart anatomy.</p>
             </br>
                 <p>However, we learnt much about the conventions of 3D medical education, such as labelling and visual style, which later informed the layout and progression of our work.</p>
@@ -110,39 +123,30 @@
                 <p>Our method of ideation was centred around brainstorming the various kinds of features we could implement to enhance the experience of the module, as well as how to place them on the appropriate screens optimally to avoid detracting from the main case content. As we were informed that <strong>four different cases needed to be completed within a 30-minute block</strong>, the efficiency and fluidity of the user experience became even more crucial factors in its design. </p>
                 <h3>Userflow</h3>
                 <p>Structurally, the lesson plans were straightforward and needed to be delivered as organised by the education team at the Children’s Hospital. I constructed initial drafts of the user-flow to plan out the progression of case information, especially how variations could be scaled up across each case. I also began to consider features of the UI that were appropriate in each frame. </p>
-                <figure>
-                    <img class="em-padding zoom" src="public/images/3dhearts/heart-userflow-1.png">
-                    <figcaption class="for-image">Simple content flow with proposed features</figcaption>
-                    <img class="em-padding zoom" src="public/images/3dhearts/heart-userflow-2.png">
-                    <figcaption class="for-image">Content flow with case information subdivided and branched out</figcaption>
-                </figure>
-                <h3>Wireframes and Wireflows</h3>
-                <p>I then turned these paths into wireframes to display the important elements on each screen. This step was iterative, with basic interface versions sketched on paper then constantly refined as the wireframes were brought into the digital space with Figma. We each brought our versions of wireframes together and selected frames that we thought delivered the content best for its context of use.</p>
-                
-<!-- 
-                <figure class="slide-cards">
-                    <div>
-                        <img class="em-padding zoom" src="public/images/3dhearts/heart-wireframe-1.png">
-                    </div>
-                    <div>
-                        <img class="em-padding zoom" src="public/images/3dhearts/heart-wireframe-2.png">
-                    </div>
-                    <div>
-                        <img class="em-padding zoom" src="public/images/3dhearts/heart-wireframe-2.png">
-                    </div>
-                </figure>
-                <article>
-                    <a class="previous" onclick="slideFunction(-1)">
+                <article class="slide-article">
+                    <figure class="slide-cards" onscroll="slideCardFunction(1)">
+                        <div>
+                            <img class="em-padding zoom" src="public/images/3dhearts/heart-userflow-1.png">
+                            <figcaption class="for-image">Simple content flow with proposed features</figcaption>
+                        </div>
+                        <div>
+                            <img class="em-padding zoom" src="public/images/3dhearts/heart-userflow-2.png">
+                            <figcaption class="for-image">Content flow with case information subdivided and branched out</figcaption>
+                        </div>
+                    </figure>
+                    <a class="previous" onclick="slideFunction(-1, 1)">
                         <svg width="71" height="50" viewBox="0 0 71 87" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M66 7L14 43.5L66 80" stroke="white" stroke-width="15"/>
                         </svg>
                     </a>
-                    <a class="next" onclick="slideFunction(1)">
+                    <a class="next" onclick="slideFunction(1, 1)">
                         <svg width="71" height="50" viewBox="0 0 71 87" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5 7L57 43.5L5 80" stroke="white" stroke-width="15"/>
                         </svg>                        
                     </a>
-                </article> -->
+                    </article>
+                <h3>Wireframes and Wireflows</h3>
+                <p>I then turned these paths into wireframes to display the important elements on each screen. This step was iterative, with basic interface versions sketched on paper then constantly refined as the wireframes were brought into the digital space with Figma. We each brought our versions of wireframes together and selected frames that we thought delivered the content best for its context of use.</p>
 
                 <figure>
                     <img class="zoom" src="public/images/3dhearts/heart-wireframe-1.png">
@@ -207,58 +211,7 @@
                 <p>Overall, the final interaction comprises of four cases with three sections in each – case details, exploration, and explanation. 'Case Details' and 'Explanation' sections are simple click-throughs, where students read and progress through information at their own pace. </p>
                 </br>
                 <p>The main 'Exploration' section is where students can progress through instructive steps with an automatically orienting digital heart model to use as a point of reference while exploring the 3D printed model in their hands.</p>
-                <article class="slide-article">
-                <figure class="slide-cards" onscroll="slideCardFunction(0)">
-                    <div>
-                        <img class="em-padding zoom" src="public/images/3dhearts/heart-solution-1.png">
-                        <figcaption class="for-image">General layout broken down</figcaption>
-                    </div>
-                    <div>
-                        <img class="em-padding zoom" src="public/images/3dhearts/heart-solution-2.png">
-                        <figcaption class="for-image">Exploration elements broken down</figcaption>
-                    </div>
-                    <div>
-                        <img class="em-padding zoom" src="public/images/3dhearts/heart-solution-3.png">
-                        <figcaption class="for-image">Case details pop-up elements broken down</figcaption>
-                    </div>
-                </figure>
-                <a id="previous" onclick="slideFunction(-1, 0)">
-                    <svg width="71" height="50" viewBox="0 0 71 87" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M66 7L14 43.5L66 80" stroke="white" stroke-width="15"/>
-                    </svg>
-                </a>
-                <a id="next" onclick="slideFunction(1, 0)">
-                    <svg width="71" height="50" viewBox="0 0 71 87" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5 7L57 43.5L5 80" stroke="white" stroke-width="15"/>
-                    </svg>                        
-                </a>
-            </article>
-            <article class="slide-article">
-                <figure class="slide-cards" onscroll="slideCardFunction(1)">
-                    <div>
-                        <img class="em-padding zoom" src="public/images/3dhearts/heart-solution-1.png">
-                        <figcaption class="for-image">General layout broken down</figcaption>
-                    </div>
-                    <div>
-                        <img class="em-padding zoom" src="public/images/3dhearts/heart-solution-2.png">
-                        <figcaption class="for-image">Exploration elements broken down</figcaption>
-                    </div>
-                    <div>
-                        <img class="em-padding zoom" src="public/images/3dhearts/heart-solution-3.png">
-                        <figcaption class="for-image">Case details pop-up elements broken down</figcaption>
-                    </div>
-                </figure>
-                <a id="previous" onclick="slideFunction(-1, 1)">
-                    <svg width="71" height="50" viewBox="0 0 71 87" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M66 7L14 43.5L66 80" stroke="white" stroke-width="15"/>
-                    </svg>
-                </a>
-                <a id="next" onclick="slideFunction(1, 1)">
-                    <svg width="71" height="50" viewBox="0 0 71 87" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5 7L57 43.5L5 80" stroke="white" stroke-width="15"/>
-                    </svg>                        
-                </a>
-                </article>
+                
                 <article class="slide-article">
                 <figure class="slide-cards" onscroll="slideCardFunction(2)">
                     <div>
@@ -274,12 +227,12 @@
                         <figcaption class="for-image">Case details pop-up elements broken down</figcaption>
                     </div>
                 </figure>
-                <a id="previous" onclick="slideFunction(-1, 2)">
+                <a class="previous" onclick="slideFunction(-1, 2)">
                     <svg width="71" height="50" viewBox="0 0 71 87" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M66 7L14 43.5L66 80" stroke="white" stroke-width="15"/>
                     </svg>
                 </a>
-                <a id="next" onclick="slideFunction(1, 2)">
+                <a class="next" onclick="slideFunction(1, 2)">
                     <svg width="71" height="50" viewBox="0 0 71 87" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5 7L57 43.5L5 80" stroke="white" stroke-width="15"/>
                     </svg>                        
