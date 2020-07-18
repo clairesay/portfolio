@@ -146,7 +146,9 @@
             <p class="quote">"We strive to ensure that individuals contributing to recovery efforts for victims of natural disasters can donate physical and financial goods with the confidence that their contributions are being utilised to bring about impactful change to affected communities. Providing a sense of trust between donors and charities through facilitating effective communication between them will lift the haze of uncertainty clouding donor mindset hence empowering them to make a productive impact in times of need."</p>
             <h2>Ideation</h2>
             <p>The brief called for an experience that carefully considered both digital and spatial elements. Through design sprints, we came up with dozens of one-line ideas but pursued four to elaborate into experience concepts. We then storyboarded scenarios of how we perceived each to pan out.</p>
-                <figure class="slide-cards">
+                
+            <article class="slide-article">
+                <figure class="slide-cards" onscroll="slideCardFunction(0)">
                     <div>
                         <img class="em-padding zoom" src="public/images/collaborate/collaborate-storyboard-3.png">
                         <figcaption class="for-image">Storyboard by Claire Say</figcaption>
@@ -164,16 +166,23 @@
                         <figcaption class="for-image">Storyboard by Zeynep Canli</figcaption>
                     </div>
                 </figure>
-                <a id="previous" onclick="slideFunction(-1)">
+            
+                <a class="previous" onclick="slideFunction(-1, 0)">
                     <svg width="71" height="50" viewBox="0 0 71 87" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M66 7L14 43.5L66 80" stroke="white" stroke-width="15"/>
                     </svg>
                 </a>
-                <a id="next" onclick="slideFunction(1)">
+                <a class="next" onclick="slideFunction(1, 0)">
                     <svg width="71" height="50" viewBox="0 0 71 87" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5 7L57 43.5L5 80" stroke="white" stroke-width="15"/>
                     </svg>                        
                 </a>
+                
+            </article>
+
+
+
+
             <p>With a Pugh Selection Matrix, we rated our concepts based on a selection of highly relevant criteria. Then we whittled our options down to one, based on the matrix score as well as our judgement on how well it responded to the briefs. A part of the development process involved adding features we thought were important, taking some ideas from the discarded designs as well as removing superficial elements.</p>
             <figure>
                 <img class="em-padding zoom" src="public/images/collaborate/collaborate-pugh-matrix.png">
