@@ -112,42 +112,51 @@ function progressAnchor(n) {
 
 // /////////////////////////////// RESTORE THIS ////////////////////////////////////////
 
-var totalSlideCards = document.querySelectorAll('.slide-cards div');
+// var totalSlideCards = document.querySelectorAll('.slide-cards div');
 
 
-const slideCards = document.getElementsByClassName('slide-cards')[0];
-const slideCardImageWidth = document.querySelectorAll('.slide-cards img')[0].clientWidth;
-var scrollLimit = (totalSlideCards.length - 1)*slideCardImageWidth;
+// const slideCards = document.getElementsByClassName('slide-cards')[0];
+// const slideCardImageWidth = document.querySelectorAll('.slide-cards img')[0].clientWidth;
+// var scrollLimit = (totalSlideCards.length - 1)*slideCardImageWidth;
 
-var next = document.getElementById('next');
-var previous = document.getElementById('previous');
+// var next = document.getElementById('next');
+// var previous = document.getElementById('previous');
 
-var slideFunctionBaseNumber = 0;
-previous.style.visibility = "hidden";
+// var slideFunctionBaseNumber = 0;
+// previous.style.visibility = "hidden";
 
-slideCards.addEventListener('scroll', function () {
-    if (slideCards.scrollLeft < 50) {
-        previous.style.visibility = "hidden";
-        previous.style.opacity = "0";
-    } else if (slideCards.scrollLeft > scrollLimit - 50) {
-        next.style.visibility = "hidden";
-        next.style.opacity = "0";
-    } else {
-        previous.style.visibility = "visible";
-        previous.style.opacity = "1";
-        next.style.visibility = "visible";
-        next.style.opacity = "1";
-    }
-}) 
+// slideCards.addEventListener('scroll', function () {
 
-function slideFunction(n) {
-    slideFunctionBaseNumber += n;
-    if (n > 0) {
-        slideCards.scrollBy(200, 0);
-    } else if (n < 0) {
-        slideCards.scrollBy(-200, 0)
-    }
-}
+//         if (slideCards.scrollLeft < 50) {
+//             previous.style.visibility = "hidden";
+//             previous.style.opacity = "0";
+//         } else if (slideCards.scrollLeft > scrollLimit - 50) {
+//             next.style.visibility = "hidden";
+//             next.style.opacity = "0";
+//         } else {
+//             previous.style.visibility = "visible";
+//             previous.style.opacity = "1";
+//             next.style.visibility = "visible";
+//             next.style.opacity = "1";
+//         }
+// }) 
+
+
+// function slideFunction(n) {
+//     slideFunctionBaseNumber += n;
+//     if (n > 0) {
+//         console.log('yes')
+//         slideCards.scrollBy(200, 0);
+//         if ((slideFunctionBaseNumber == 1) && (slideCards.scrollLeft < 600)) {
+//             console.log('d0')
+//             slideCards.scrollBy(200, 0);
+//             slideCards.scrollBy(200, 0);
+//         }
+//     } else if (n < 0) {
+//         slideCards.scrollBy(-200, 0)
+//     }
+// }
+
 
 // //////////////////////////// RESTORE THIS //////////////////////////////////
 
@@ -286,6 +295,44 @@ function buttonPosition(state) {
     }
 }
 
+var slideArticle = document.getElementsByClassName('slide-article');
+var slideCards = document.getElementsByClassName('slide-cards');
+
+
+var slideFunctionBaseNumber = 0;
+
+for (var k = 0; k < slideArticle.length; k ++ ) {
+
+}
+
+function slideCardFunction(m) {
+    var slideCardsDiv = slideCards[m].getElementsByTagName('div');
+    var slideWidth = slideCardsDiv[0].clientWidth;
+    // var next = slideArticle.getElementsByClassName('next');
+    // var previous = slideArticle.getElementsByClassName('previous')
+
+    if (slideCards[m].scrollLeft < 50) {
+        console.log('left')
+    } else if (slideCards[m].scrollLeft > (slideCardsDiv.length - 1)*slideWidth - 50) {
+        console.log('right')
+    } else {
+        console.log('inbetween')
+    }
+}
+
+
+function slideFunction(n, m) {
+    slideFunctionBaseNumber += n;
+    if (n > 0) {
+        slideCards[m].scrollBy(400, 0);
+
+    } else if (n < 0) {
+
+        slideCards[m].scrollBy(-200, 0)
+    }
+
+
+}
 
 
 

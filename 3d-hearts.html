@@ -145,15 +145,8 @@
                 </article> -->
 
                 <figure>
-                    <!-- <img class="zoom" src="public/images/3dhearts/heart-wireframe-1.png"> -->
-                    <!-- <figcaption class="for-image">Exploration elements broken down</figcaption> -->
-                <!-- </figure>
-                <figure> -->
-                    <!-- <img class="zoom" src="public/images/3dhearts/heart-wireframe-2.png"> -->
-                    <!-- <figcaption class="for-image">Exploration elements broken down</figcaption> -->
-                <!-- </figure>
-                <figure>
-                    <img  src="public/images/3dhearts/heart-wireframe-3.png"> -->
+                    <img class="zoom" src="public/images/3dhearts/heart-wireframe-1.png">
+                    <img class="zoom" src="public/images/3dhearts/heart-wireframe-2.png">
                     <figcaption class="for-image">Early stage sketched wireframes for iPad</figcaption>
                 </figure>
                 
@@ -214,7 +207,8 @@
                 <p>Overall, the final interaction comprises of four cases with three sections in each – case details, exploration, and explanation. 'Case Details' and 'Explanation' sections are simple click-throughs, where students read and progress through information at their own pace. </p>
                 </br>
                 <p>The main 'Exploration' section is where students can progress through instructive steps with an automatically orienting digital heart model to use as a point of reference while exploring the 3D printed model in their hands.</p>
-                <figure class="slide-cards">
+                <article class="slide-article">
+                <figure class="slide-cards" onscroll="slideCardFunction(0)">
                     <div>
                         <img class="em-padding zoom" src="public/images/3dhearts/heart-solution-1.png">
                         <figcaption class="for-image">General layout broken down</figcaption>
@@ -227,22 +221,69 @@
                         <img class="em-padding zoom" src="public/images/3dhearts/heart-solution-3.png">
                         <figcaption class="for-image">Case details pop-up elements broken down</figcaption>
                     </div>
+                </figure>
+                <a id="previous" onclick="slideFunction(-1, 0)">
+                    <svg width="71" height="50" viewBox="0 0 71 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M66 7L14 43.5L66 80" stroke="white" stroke-width="15"/>
+                    </svg>
+                </a>
+                <a id="next" onclick="slideFunction(1, 0)">
+                    <svg width="71" height="50" viewBox="0 0 71 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 7L57 43.5L5 80" stroke="white" stroke-width="15"/>
+                    </svg>                        
+                </a>
+            </article>
+            <article class="slide-article">
+                <figure class="slide-cards" onscroll="slideCardFunction(1)">
+                    <div>
+                        <img class="em-padding zoom" src="public/images/3dhearts/heart-solution-1.png">
+                        <figcaption class="for-image">General layout broken down</figcaption>
+                    </div>
+                    <div>
+                        <img class="em-padding zoom" src="public/images/3dhearts/heart-solution-2.png">
+                        <figcaption class="for-image">Exploration elements broken down</figcaption>
+                    </div>
                     <div>
                         <img class="em-padding zoom" src="public/images/3dhearts/heart-solution-3.png">
                         <figcaption class="for-image">Case details pop-up elements broken down</figcaption>
                     </div>
                 </figure>
-                <article>
-                    <a class="previous" onclick="slideFunction(-1)">
-                        <svg width="71" height="50" viewBox="0 0 71 87" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M66 7L14 43.5L66 80" stroke="white" stroke-width="15"/>
-                        </svg>
-                    </a>
-                    <a class="next" onclick="slideFunction(1)">
-                        <svg width="71" height="50" viewBox="0 0 71 87" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 7L57 43.5L5 80" stroke="white" stroke-width="15"/>
-                        </svg>                        
-                    </a>
+                <a id="previous" onclick="slideFunction(-1, 1)">
+                    <svg width="71" height="50" viewBox="0 0 71 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M66 7L14 43.5L66 80" stroke="white" stroke-width="15"/>
+                    </svg>
+                </a>
+                <a id="next" onclick="slideFunction(1, 1)">
+                    <svg width="71" height="50" viewBox="0 0 71 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 7L57 43.5L5 80" stroke="white" stroke-width="15"/>
+                    </svg>                        
+                </a>
+                </article>
+                <article class="slide-article">
+                <figure class="slide-cards" onscroll="slideCardFunction(2)">
+                    <div>
+                        <img class="em-padding zoom" src="public/images/3dhearts/heart-solution-1.png">
+                        <figcaption class="for-image">General layout broken down</figcaption>
+                    </div>
+                    <div>
+                        <img class="em-padding zoom" src="public/images/3dhearts/heart-solution-2.png">
+                        <figcaption class="for-image">Exploration elements broken down</figcaption>
+                    </div>
+                    <div>
+                        <img class="em-padding zoom" src="public/images/3dhearts/heart-solution-3.png">
+                        <figcaption class="for-image">Case details pop-up elements broken down</figcaption>
+                    </div>
+                </figure>
+                <a id="previous" onclick="slideFunction(-1, 2)">
+                    <svg width="71" height="50" viewBox="0 0 71 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M66 7L14 43.5L66 80" stroke="white" stroke-width="15"/>
+                    </svg>
+                </a>
+                <a id="next" onclick="slideFunction(1, 2)">
+                    <svg width="71" height="50" viewBox="0 0 71 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 7L57 43.5L5 80" stroke="white" stroke-width="15"/>
+                    </svg>                        
+                </a>
                 </article>
                 <h3>Why it Works</h3>
                 <figure class="hearts problem-highlight">

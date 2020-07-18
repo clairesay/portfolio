@@ -678,6 +678,10 @@ textarea {
     margin-top: 60px;
 }
 
+h2 ~ i {
+    
+}
+
 p ~ h3 {
     margin-top: 30px;
     margin-bottom: 0.25em;
@@ -834,19 +838,19 @@ figcaption.for-image {
 .slide-cards img {
     box-shadow: 0 0 10px #aaaaaa;
 }
-  .next {
+  #next {
       left: calc(100% - 3em);
-      visibility: visible;
-      opacity: 1;
+      /* visibility: visible; */
+      /* opacity: 1; */
   }
 
-  .previous {
+  #previous {
       left: -1em;
       /* visibility: hidden; */
-      opacity: 0;
+      /* opacity: 0; */
   }
 
-  .next, .previous {
+  #next, #previous {
     display: inline-flex;
     width: 48px;
     height: 48px;
@@ -865,11 +869,11 @@ figcaption.for-image {
     transition: all 0.2s ease-in-out;
   }
 
-  .next svg, .previous svg {
+  #next svg, #previous svg {
       transform: scale(0.45);
   }
 
-  .next:hover, .previous:hover {
+  #next:hover, #previous:hover {
     filter: drop-shadow(0px 0px 6px #e7ca4a);
   }
 
@@ -1248,12 +1252,12 @@ img.zoom:hover {
 
     /* PROJECTS */
 
-    .next, .previous {
+    #next, #previous {
         width: 36px;
         height: 36px;
     }
 
-    .next svg, .previous svg {
+    #next svg, #previous svg {
         height: 30;
         margin-top: -6px;
         transform: scale(0.4);
