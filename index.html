@@ -24,9 +24,19 @@
             <a class="nav-link w" href="contact-me.html">contact.me</a>
         </header>
         <section class="landing yellow">
-            <h1>Hey There!</h1>
-            <h3>I'm Claire *smiles* Nice to meet you! </h3>
-            <h3>I'm an aspiring user experience & user interface designer.</h3>
+            <img id="profile-image" src="">
+            <article>
+                <h1>Hi! I'm Claire.</h1>
+            </br>
+                <!-- <h3>Welcome to my portfolio!</h3> -->
+        <!-- </br> -->
+                <!-- <h3>Hi, I'm Claire</h3> -->
+            </br>
+                <h3><mark>I'm a UX designer in training looking to specialise in UI Design and Front-end Development.</mark></h3>
+                <a href="contact-me.html">See what I can do!</a> 
+                <!-- <button class="see-more">See what I can do</button> -->
+            </article>
+
             <!-- <h1>Hey There!</h1>
             <h2>Hey There!</h2>
             <h3>Hey There!</h3>
@@ -95,4 +105,25 @@
         </footer>
     </body>
     <script src="public/js/common.js"></script>
+    <!-- <script>
+            var timeOfDay = new Date().toLocaleTimeString('en-GB', { hour: "numeric", minute: "numeric"});
+
+            var intTimeOfDay = parseInt(timeOfDay.replace(':', ''));
+            const greeting = document.querySelector('#index .landing h1');
+
+            if ((intTimeOfDay >= 500) && (intTimeOfDay < 1200)) {
+                greeting.innerHTML = 'Good Morning!'
+                // console.log('good morning')
+            } else if ((intTimeOfDay >= 1200) && (intTimeOfDay < 1800)) {
+                greeting.innerHTML = 'Good Afternoon!'
+                // console.log('good afternoon')
+            } else if ((intTimeOfDay >= 1800) || (intTimeOfDay < 500)) {
+                greeting.innerHTML = 'Good Evening!'
+                // console.log('good evening')
+            } else {
+                greeting.innerHTML = 'Hey There!'
+            }
+
+    </script> -->
+
 </html>
