@@ -378,6 +378,7 @@ footer .social-icon:hover::after {
     font-weight: 900;
     font-size: 24px;
     line-height: 40px;
+    line-height: 42px;
     /* font-style: italic; */
 }
 
@@ -431,6 +432,12 @@ footer .social-icon:hover::after {
 
 .peek h1 {
     margin-bottom: 0.5em;
+    line-height: 50px;
+}
+
+.peek h1 mark {
+    background-color: #ffdd44;
+    padding: 0.1em;
 }
 
 .peek a {
