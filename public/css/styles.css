@@ -694,11 +694,14 @@ figcaption p {
 .details {
     /* min-height: calc(100vh - 144px - 2em); */
     padding: 2em;
+    position: relative;
+    margin-left: 280px;
+    max-width: 600px;
 }
 
 .copy {
     position: absolute;
-    bottom: 60px;
+    bottom: 70px;
     left: 130px;
     display: flex;
     visibility: hidden;
@@ -1341,6 +1344,12 @@ img.zoom:hover {
         display: none;
     }
 
+    /* CONTACT ME */
+    .details {
+        margin-left: 0;
+        padding: 2em 5%;
+    }
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -1492,6 +1501,8 @@ img.zoom:hover {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto 1fr;
         margin: auto;
+
+       padding-top: 144px;
     }
 
     #profile-details {
