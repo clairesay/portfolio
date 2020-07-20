@@ -73,25 +73,48 @@ dropDown.addEventListener('mouseleave', function () {
 // mediaSixHundred.addListener(mediaQueryChecker); // Attach listener function on state changes
 
 ////////////////////// EMAIL ADDRESS COPYING ///////////////////////////////
+// var emailAddress = document.getElementsByClassName('email-address');
+var copyTip = document.getElementsByClassName('copy');
+var copyText = document.querySelectorAll('.email-address ~ textarea')[0];
 
-const emailAddress = document.getElementsByClassName('email-address')[0];
-const copyTip = document.getElementsByClassName('copy')[0];
-const copyText = document.querySelectorAll('.email-address ~ textarea')[0];
-
-emailAddress.addEventListener('click', function () {
+function copyTextFunction(n) {
 
     copyText.select();
     copyText.setSelectionRange(0, 99999)
     document.execCommand('copy');
 
-    copyTip.innerHTML = "Copied"
-})
+    copyTip[n].innerHTML = "Copied"
+}
 
-emailAddress.addEventListener('mouseout', function() {
-    setTimeout(function() {
-        copyTip.innerHTML = "Copy"
-    }, 200)
-})
+function copyTextEnd(n) {
+    setTimeout(
+        function() {
+            copyTip[n].innerHTML = "Copy"
+        } , 200);
+}
+
+
+
+
+// for (var e = 0; e < emailAddress.length; e ++) {
+
+//     emailAddress.addEventListener('click', function () {
+
+//         copyText.select();
+//         copyText.setSelectionRange(0, 99999)
+//         document.execCommand('copy');
+    
+//         copyTip.innerHTML = "Copied"
+//     })
+    
+//     emailAddress.addEventListener('mouseout', function() {
+//         setTimeout(function() {
+//             copyTip.innerHTML = "Copy"
+//         }, 200)
+//     })
+    
+// }
+
 
 //////////////////// WINDOW GO ////////////////////
 

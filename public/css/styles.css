@@ -374,12 +374,29 @@ footer .social-icon:hover::after {
     background-color: rgb(250, 250, 250);
 }
 
-#index .landing h3 {
+#index .landing h2 {
     font-weight: 900;
     font-size: 24px;
     line-height: 40px;
     line-height: 42px;
     /* font-style: italic; */
+}
+
+h3 > img {
+    height: 1.75em;
+    margin-right: 0.5em;
+    transform: scale(1) translateY(0);
+    transition: all 0.2s ease-in;
+}
+
+#index .landing h3 {
+    display: flex;
+    align-items: flex-end;
+
+}
+
+#index .landing h3:hover > img {
+    transform: scale(1.1) translateY(-2px);
 }
 
 /* #index .landing button {
@@ -613,19 +630,27 @@ figcaption p {
 
 /* CONTACT ME */
 #profile-details {
-    margin: auto;
-    margin-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 250px;
 }
 
 #profile-details a {
-    position: relative;
+    /* position: relative; */
 }
 
 #profile {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    min-height: 250px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center;; */
     padding-top: calc(72px + 2em);
-    padding-bottom: 4em;
+    /* padding-bottom: 4em; */
 }
 
 #profile-image {
@@ -638,6 +663,11 @@ figcaption p {
     margin-right: 2em;
 }
 
+#profile-details .social-icon {
+    width: 48px;
+    margin: 0.5em 0.25em 0 0.25em;
+}
+
 .social-icon {
     position: relative;
     width: 36px;
@@ -648,7 +678,7 @@ figcaption p {
     content: '';
     position: absolute;
     top: 6px;
-    right: 8px;
+    right: 6px;
     width: 10px;
     height: 10px;
 
@@ -669,7 +699,7 @@ figcaption p {
 .copy {
     position: absolute;
     bottom: 60px;
-    left: 80px;
+    left: 130px;
     display: flex;
     visibility: hidden;
     opacity: 0;
@@ -678,6 +708,16 @@ figcaption p {
     color: #555555;
     border-radius: 2px;
     font-weight: 600;
+}
+
+#profile-details .copy {
+    /* z-index: 20; */
+    position: relative;
+    background-color:white;
+    top: -10px;
+    left: 0;
+    /* bottom: 100px; */
+    /* left: 80px; */
 }
 
 .copy::after {
@@ -689,6 +729,12 @@ figcaption p {
     border-width: 5px;
     border-style: solid;
     border-color: #ffdd44 transparent transparent transparent;
+}
+
+#profile-details .copy::after {
+    top: auto;
+    bottom: 100%;  /* At the top of the tooltip */
+    border-color: transparent transparent white transparent;
 }
 
 .email-address:hover + .copy {
@@ -704,8 +750,16 @@ figcaption p {
 
 }
 
-.email-address {
+#profile-details > .email-address:hover {
+    background-color: white;
+    color: black;
+    /* color: #ffdd44; */
+}
 
+.email-address {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 36px;
     transition: all 0.2s ease-in-out;
 }
 
