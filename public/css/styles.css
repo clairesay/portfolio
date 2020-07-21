@@ -572,6 +572,7 @@ img.active {
     color: #555555;
     border-radius: 2px;
     font-weight: 600;
+    padding: 0.5em 1em;
 }
 
 #profile-details .copy {
