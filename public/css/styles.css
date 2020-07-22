@@ -1294,7 +1294,7 @@ img.zoom:hover {
 @media only screen and (max-width: 550px) {
     /* INDEX */
     #index .landing {
-        padding: 96px 36px 36px 36px;
+        padding: 120px 36px 36px 36px;
     }
 
     /* FOOTER */
