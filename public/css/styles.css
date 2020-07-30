@@ -361,6 +361,33 @@ h3 > img {
     transform: scale(1.1) translateY(-2px);
 }
 
+#case-studies {
+    font-size: 48px;
+    color: #aaaaaa;
+    margin: auto;
+    margin-top: 1em;
+    /* margin-left: 30px; */
+}
+
+#case-studies::before, #case-studies::after {
+    content: '';
+    background-color: #aaaaaa;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    margin-top: 18px;
+}
+
+#case-studies::before {
+    margin-left: -54px;
+}
+
+#case-studies::after {
+    margin-left: 30px;
+}
+
 /* INDEX PEEK CARDS */
 .peek {
     position: relative;
@@ -649,7 +676,10 @@ textarea {
 }
 
 .case-information {
-    max-width: 70%;
+    /* max-width: 70%; */
+    max-width: 650px;
+    width: 100%;
+    margin-left: 25px;
 }
 
 .case-information h1 {
@@ -661,7 +691,26 @@ textarea {
 
 .case-information h2 {
     margin-bottom: 0.25em;
-    margin-top: 60px;
+    margin-top: 100px;
+    margin-left: 30px;
+}
+
+.case-information h2::before {
+    content: '';
+    background-color: #ffdd44;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    margin-left: -30px;
+    margin-top: 6px;
+}
+
+.case-information h2:last-of-type {
+    visibility: hidden;
+    margin-top: 0;
+    /* margin-top: 0; */
 }
 
 h2 ~ i {
@@ -669,13 +718,23 @@ h2 ~ i {
 }
 
 p ~ h3 {
-    margin-top: 40px;
-    margin-bottom: 0.25em;
+    margin-top: 60px;
+    margin-bottom: 0.5em;
 }
 
 p ~ h4 {
     margin-top: 40px;
-    margin-bottom: 0.25em;
+    margin-bottom: 0.5em;
+}
+
+.case-information h3, .case-information h4 {
+    font-weight: 700;
+}
+
+.case-information h4 {
+    color: #999999;
+    font-style: italic;
+    font-size: 18px; 
 }
 
 .case-information i {
@@ -685,6 +744,14 @@ p ~ h4 {
 
 .case-information img {
     max-width: 100%;
+}
+
+.case-information p {
+    margin-bottom: 1em;
+}
+
+h2  + h3 {
+    margin-top: 20px;
 }
 
 /* QUOTES */
@@ -749,7 +816,8 @@ mark {
 }
 
 .hearts.problem-highlight img {
-    width: auto;
+    /* width: auto; */
+    width: 75%;
     align-self: center;
     margin-left: auto;
 }
@@ -888,10 +956,10 @@ figcaption.for-image {
 #progress-bar {
     display: inline-block;
     height: 40vh;
-    min-height: 200px;
-    max-height: 250px;
+    min-height: 250px;
+    max-height: 300px;
     position: sticky;
-    top: calc(72px + 2em);
+    top: calc(72px + 25px + 2em);
     background-color: #ffdd44;
     width: 6px;
     border-radius: 1em;
@@ -900,6 +968,8 @@ figcaption.for-image {
     justify-content: space-between;
     
     white-space: nowrap;
+
+    margin-top: 25px;
 }
 
 .progress-step-label {
@@ -987,11 +1057,21 @@ img.zoom:hover {
 
 /* /////////////////////////////////////////////////////////////////////////////////////////// */
 /* //////////////////////////// ALL MEDIA QUERIES START HERE ///////////////////////////////// */
+@media only screen and (min-width: 1500px) {
+    .case-study {
+        margin-left: 175px;
+    }
+
+    .case-information {
+        margin-left: 25px;
+    }
+}
 
 @media only screen and (max-width: 1080px) {
     /* PROJECT PAGES */
     .case-information {
         max-width: 600px;
+        margin-left: 0;
     }    
 }
 
@@ -1313,6 +1393,10 @@ img.zoom:hover {
     footer .email-address {
         display: none;
     }
+
+    .hearts.problem-highlight img {
+        width: auto;
+    }
     
 }
 
@@ -1346,6 +1430,10 @@ img.zoom:hover {
     /* PROJECTS */
     .hearts.problem-highlight article {
         margin-left: 1em;
+    }
+
+    .case-information {
+        width: 87.5vw;
     }
     
     /* CONTACT ME */
