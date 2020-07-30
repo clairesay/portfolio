@@ -363,7 +363,7 @@ h3 > img {
 
 #case-studies {
     font-size: 48px;
-    color: #aaaaaa;
+    color: #cfcfcf;
     margin: auto;
     margin-top: 1em;
     /* margin-left: 30px; */
@@ -371,7 +371,7 @@ h3 > img {
 
 #case-studies::before, #case-studies::after {
     content: '';
-    background-color: #aaaaaa;
+    background-color: #cfcfcf;
     border-radius: 50%;
     display: inline-block;
     position: absolute;
@@ -746,7 +746,7 @@ p ~ h4 {
     max-width: 100%;
 }
 
-.case-information p {
+.case-information p, .details p {
     margin-bottom: 1em;
 }
 
@@ -1064,6 +1064,18 @@ img.zoom:hover {
 
     .case-information {
         margin-left: 25px;
+    }
+
+    .details .icon {
+        left: 200px;
+    }
+
+    .details {
+        margin-left: 175px;
+    }
+
+    #index .landing {
+        padding: 96px 300px 96px 300px;
     }
 }
 
