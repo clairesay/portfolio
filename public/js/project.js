@@ -1,4 +1,8 @@
 //////////////// DYNAMICALLY CREATING PROGRESS BAR LINKS //////////////////////
+setTimeout( 
+
+    function() {
+
 
 const caseStudyTitle = document.getElementsByTagName('h2');
 
@@ -67,8 +71,7 @@ for (var m = 1; m < differenceArray.length; m ++) {
 
         previousPercentageArray.length = 0;
 }
-
-
+    }, 100);
 
 window.onscroll = function () {
     for (var j = 0; j < caseStudyTitle.length; j ++) {
