@@ -957,6 +957,63 @@ figcaption.for-image {
     margin-top: 0.5em;
 }
 
+.loading {
+    position: absolute;
+    top: calc(72px + 25px + 2em);
+    /* margin-top: 125px; */
+    left: 140px;
+}
+
+.load-dot {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #cfcfcf;
+    animation: flash 1s linear alternate;
+    animation-iteration-count: infinite;
+    animation-delay: .5s;
+
+    transition: opacity 0.4s ease-in-out;
+}
+
+.load-dot::before {
+    content: '';
+    position: absolute;
+    left: -16px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #cfcfcf;
+    animation: flash 1s alternate;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+}
+
+.load-dot::after {
+    content: '';
+    position: absolute;
+    left: 16px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #cfcfcf;
+    animation: flash 1s alternate;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+
+@keyframes flash {
+    0% {
+        background-color: #cfcfcf;   
+    }
+
+    50%, 
+    100% {
+        background-color: #e7e7e7;
+    }
+}
+
 #progress-bar {
     display: inline-block;
     height: 40vh;
@@ -974,6 +1031,9 @@ figcaption.for-image {
     white-space: nowrap;
 
     margin-top: 25px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
 }
 
 .progress-step-label {

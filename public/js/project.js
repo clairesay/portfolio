@@ -75,23 +75,35 @@ function createProgressBar() {
 var caseImages = document.querySelectorAll('.case-information img');
 var loaded = caseImages.length;
 for (var c = 0; c < caseImages.length; c ++) {
-    console.log(caseImages[c].clientHeight)
+    const progressBar = document.getElementById('progress-bar');
+    const loadDot = document.getElementsByClassName('load-dot')[0];
+    // console.log(caseImages[c].clientHeight)
     if (caseImages[c].complete) {
-        console.log(c);
+        // console.log(c);
         loaded --;
+        loadDot.style.visibility = "visible";
+        loadDot.style.opacity = "1";
     } else {
         caseImages[c].addEventListener("load", function() {
             loaded--;
             if (loaded == 0) {
-                console.log('hurrah')
-                setTimeout( createProgressBar, 100);
+                // console.log('hurrah')
+                progressBar.style.visibility = "visible";
+                progressBar.style.opacity = "1";
+                loadDot.style.visibility = "hidden";
+                loadDot.style.opacity = "0";
+                setTimeout( createProgressBar, 10);
+            } else {
+                loadDot.style.visibility = "visible";
+                loadDot.style.opacity = "1";
+                // console.log('nay')
             }
         });
     }
 
     if (loaded == 0) {
-        console.log('loaded')
-        setTimeout( createProgressBar, 100);
+        // console.log('loaded')
+        setTimeout( createProgressBar, 10);
     }
 }
 
