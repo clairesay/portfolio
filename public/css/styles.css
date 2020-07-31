@@ -953,6 +953,25 @@ figcaption.for-image {
 }
 
 /* PROJECT PAGE - PROGRESS BAR */
+.process {
+    display: none;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.process h3 {
+    font-size: 24px;
+    margin-top: 40px;
+    margin-bottom: 0.5em;
+    left: 0;
+}
+
+.process img {
+    max-height: 300px;
+    /* display: none; */
+}
+
 .case-progress {
     margin-top: 0.5em;
 }
@@ -1262,7 +1281,10 @@ img.zoom:hover {
     }
 
     /* PROJECT PAGES*/
-
+    .process.horizontal{
+        display: flex;
+    }
+    
     .case-study {
         grid-template-columns: 1fr;
         padding: 0 5%;
@@ -1511,6 +1533,19 @@ img.zoom:hover {
 
     .case-information {
         width: 87.5vw;
+    }
+
+    .process.horizontal{
+        display: none;
+    }
+
+    .process.vertical {
+        display: flex;
+    }
+
+    .process.vertical img {
+        margin-left: 2em;
+        margin-top: 1em;
     }
     
     /* CONTACT ME */
