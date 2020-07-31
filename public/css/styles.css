@@ -339,9 +339,8 @@ footer .social-icon:hover::after {
 
 #index .landing h2 {
     font-weight: 900;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 40px;
-    line-height: 42px;
 }
 
 h3 > img {
@@ -550,7 +549,7 @@ img.active {
     padding: 2em;
     position: relative;
     display: grid;
-    grid-template-columns: 280px 1fr;
+    grid-template-columns: 300px 1fr;
 }
 
 .details article:nth-of-type(2) {
@@ -559,10 +558,11 @@ img.active {
 
 .details .icon {
     position: sticky;
-    left: 135px;
+    left: 196px;
     top: 100px;
+    margin-top: 1em;
     padding: 0;
-    width: 150px;
+    width: 120px;
     max-width: none;
     filter: drop-shadow(0 0 2px #f8f2e7);
     transition: none;
@@ -575,8 +575,8 @@ img.active {
 
 .details img {
     max-width: calc(50% - 1.5em);
-    padding: 1em 0;
-    padding-right: 1em;
+    padding: 1em 1em 0 0;
+    /* padding-right: 1em; */
     filter: grayscale(1) brightness(1.2);
     transition: all 0.2s ease-in-out;
 }
@@ -677,7 +677,7 @@ textarea {
 
 .case-information {
     /* max-width: 70%; */
-    max-width: 650px;
+    max-width: 600px;
     width: 100%;
     margin-left: 25px;
 }
@@ -1064,6 +1064,7 @@ img.zoom:hover {
 
     .case-information {
         margin-left: 25px;
+        max-width: 650px;
     }
 
     .details .icon {
