@@ -1,10 +1,15 @@
 //////////////// DYNAMICALLY CREATING PROGRESS BAR LINKS //////////////////////
+const caseStudyTitle = document.getElementsByTagName('h2');
+const distanceArray = [];
+const differenceArray = [];
+const previousPercentageArray = [];
+
+
+const progressStep = document.getElementsByClassName('progress-step');
+const progressStepLabel = document.getElementsByClassName('progress-step-label')
 setTimeout( 
 
     function() {
-
-
-const caseStudyTitle = document.getElementsByTagName('h2');
 
 for (var h = 0; h < caseStudyTitle.length - 1; h ++) {
     const progressBar = document.getElementById('progress-bar');
@@ -31,13 +36,7 @@ document.getElementsByClassName('progress-step-label')[0].style.top = '-0.75em';
 
 //////////////////// PROJECT PROGRESS BAR ///////////////////////////
 
-const distanceArray = [];
-const differenceArray = [];
-const previousPercentageArray = [];
 
-
-const progressStep = document.getElementsByClassName('progress-step');
-const progressStepLabel = document.getElementsByClassName('progress-step-label')
 
 for (var i = 0; i < caseStudyTitle.length; i ++) {
     function offset(el) {
