@@ -70,7 +70,7 @@ for (var m = 1; m < differenceArray.length; m ++) {
 
         previousPercentageArray.length = 0;
 }
-    }, 100);
+    }, 200);
 
 window.onscroll = function () {
     for (var j = 0; j < caseStudyTitle.length; j ++) {
