@@ -74,4 +74,39 @@
         </footer>
     </body>
     <script src="public/js/common.js"></script>
+    <script>
+        var caseImages = document.querySelectorAll('.peek img');
+        var loaded = caseImages.length;
+        for (var c = 0; c < caseImages.length; c ++) {
+
+            if (caseImages[c].complete) {
+
+                loaded --;
+            } else {
+
+                function imageEventListener(c) {
+                    caseImages[c].addEventListener("load", function() {
+                    loaded--;
+                    if (loaded == 0) {
+                        showImages(c);
+                    } else {
+                        caseImages[c].style.visibility = "hidden";
+                        caseImages[c].style.opacity = "0";
+                    }
+                });
+                imageEventListener(c);
+                }
+
+            }
+
+            if (loaded == 0) {
+                showImages(c);
+            }
+            
+            function showImages(c) {
+                caseImages[c].style.visibility = "visible";
+                caseImages[c].style.opacity = "1";
+            }
+        }
+    </script>
 </html>
