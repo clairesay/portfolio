@@ -323,7 +323,7 @@ footer .social-icon:hover::after {
 }
 
 #index .landing {
-    height: 50vh;
+    /* height: 50vh; */
     padding: 96px 145px 96px 145px;
     display: flex;
     align-items: center;
