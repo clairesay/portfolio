@@ -7,70 +7,95 @@ const previousPercentageArray = [];
 
 const progressStep = document.getElementsByClassName('progress-step');
 const progressStepLabel = document.getElementsByClassName('progress-step-label')
-setTimeout( 
-
-    function() {
-
-for (var h = 0; h < caseStudyTitle.length - 1; h ++) {
-    const progressBar = document.getElementById('progress-bar');
-    
-    const initProgressStepLabel = document.createElement('a')
-    initProgressStepLabel.setAttribute('class', 'progress-step-label');
-    initProgressStepLabel.setAttribute('onclick', 'progressAnchor(' + h + ')');
-
-    const initProgressStep = document.createElement('div');
-    initProgressStep.setAttribute('class', 'progress-step');
-    
-    const initProgressStepLabelText = document.createElement('p');
-    initProgressStepLabelText.innerHTML = caseStudyTitle[h].innerHTML;
 
 
-    initProgressStepLabel.appendChild(initProgressStep);
-    initProgressStepLabel.appendChild(initProgressStepLabelText);
-    progressBar.appendChild(initProgressStepLabel);
+
+function createProgressBar() {
+    for (var h = 0; h < caseStudyTitle.length - 1; h ++) {
+        const progressBar = document.getElementById('progress-bar');
+        
+        const initProgressStepLabel = document.createElement('a')
+        initProgressStepLabel.setAttribute('class', 'progress-step-label');
+        initProgressStepLabel.setAttribute('onclick', 'progressAnchor(' + h + ')');
+
+        const initProgressStep = document.createElement('div');
+        initProgressStep.setAttribute('class', 'progress-step');
+        
+        const initProgressStepLabelText = document.createElement('p');
+        initProgressStepLabelText.innerHTML = caseStudyTitle[h].innerHTML;
+
+
+        initProgressStepLabel.appendChild(initProgressStep);
+        initProgressStepLabel.appendChild(initProgressStepLabelText);
+        progressBar.appendChild(initProgressStepLabel);
+    }
+
+
+    document.getElementsByClassName('progress-step-label')[0].style.top = '-0.75em';
+
+
+    //////////////////// PROJECT PROGRESS BAR ///////////////////////////
+
+
+
+    for (var i = 0; i < caseStudyTitle.length; i ++) {
+        function offset(el) {
+            const elRect = el.getBoundingClientRect(),
+            scrollT = window.pageYOffset || document.documentElement.scrollTop;
+            return { top: elRect.top + scrollT }
+        }
+        const progressStepOffset = offset(caseStudyTitle[i]);
+
+        distanceArray.push(progressStepOffset.top);
+        if (i < caseStudyTitle.length - 1) {
+            const progressStepOffsetPlus = offset(caseStudyTitle[i+1]);
+            differenceArray.push(progressStepOffsetPlus.top - progressStepOffset.top);
+        }
+    }  
+
+    const totalDifferenceArray = differenceArray.reduce((a, b) => a + b);
+
+    for (var m = 1; m < differenceArray.length; m ++) {
+        // percentage is the %distance between this and the previous header
+        // const percentage = differenceArray[m]/totalDifferenceArray*100;
+        // for all of n is equal to m, n is greater than 0
+        for (var n = m; n > 0; n --) {
+            // add new numbers into the previous percentage array
+            // push all of the percentage values
+            previousPercentageArray.push(differenceArray[m - n]/totalDifferenceArray*100);
+        
+        }
+
+            progressStepLabel[m].style.top = previousPercentageArray.reduce((a, b) => a + b) + "%";
+
+            previousPercentageArray.length = 0;
+    }
+}
+
+var caseImages = document.querySelectorAll('.case-information img');
+var loaded = caseImages.length;
+for (var c = 0; c < caseImages.length; c ++) {
+    console.log(caseImages[c].clientHeight)
+    if (caseImages[c].complete) {
+        console.log(c);
+        loaded --;
+    } else {
+        caseImages[c].addEventListener("load", function() {
+            loaded--;
+            if (loaded == 0) {
+                console.log('hurrah')
+                setTimeout( createProgressBar, 100);
+            }
+        });
+    }
+
+    if (loaded == 0) {
+        console.log('loaded')
+        setTimeout( createProgressBar, 100);
+    }
 }
 
 
-document.getElementsByClassName('progress-step-label')[0].style.top = '-0.75em';
-
-
-//////////////////// PROJECT PROGRESS BAR ///////////////////////////
-
-
-
-for (var i = 0; i < caseStudyTitle.length; i ++) {
-    function offset(el) {
-        const elRect = el.getBoundingClientRect(),
-        scrollT = window.pageYOffset || document.documentElement.scrollTop;
-        return { top: elRect.top + scrollT }
-    }
-    const progressStepOffset = offset(caseStudyTitle[i]);
-
-    distanceArray.push(progressStepOffset.top);
-    if (i < caseStudyTitle.length - 1) {
-        const progressStepOffsetPlus = offset(caseStudyTitle[i+1]);
-        differenceArray.push(progressStepOffsetPlus.top - progressStepOffset.top);
-    }
-}  
-
-const totalDifferenceArray = differenceArray.reduce((a, b) => a + b);
-
-for (var m = 1; m < differenceArray.length; m ++) {
-    // percentage is the %distance between this and the previous header
-    // const percentage = differenceArray[m]/totalDifferenceArray*100;
-    // for all of n is equal to m, n is greater than 0
-    for (var n = m; n > 0; n --) {
-        // add new numbers into the previous percentage array
-        // push all of the percentage values
-        previousPercentageArray.push(differenceArray[m - n]/totalDifferenceArray*100);
-    
-    }
-
-        progressStepLabel[m].style.top = previousPercentageArray.reduce((a, b) => a + b) + "%";
-
-        previousPercentageArray.length = 0;
-}
-    }, 200);
 
 window.onscroll = function () {
     for (var j = 0; j < caseStudyTitle.length; j ++) {
