@@ -6,6 +6,7 @@
     font-family: 'Muli', sans-serif;
     color: black;
     scroll-behavior: smooth;
+    position: relative;
 }
 
 /* GLOBAL TAG STYLES */
@@ -408,6 +409,7 @@ h3 > img {
     border-radius: 7px;
 
     background-color: white;
+    position: static;
 
 }
 
