@@ -434,12 +434,12 @@ h3 > img {
 }
 
 .peek a {
-    position: inherit;
+    position: relative;
     height: 50%;
 }
 
 .peek img {
-    position: inherit;
+    position: relative;
     width: 66vw;
     height: 50%;
     object-fit: cover;
