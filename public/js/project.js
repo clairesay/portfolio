@@ -88,8 +88,9 @@ for (var c = 0; c < caseImages.length; c ++) {
             loaded--;
             if (loaded == 0) {
                 // console.log('hurrah')
-                progressBar.style.visibility = "visible";
-                progressBar.style.opacity = "1";
+                // progressBar.style.visibility = "visible";
+                // progressBar.style.opacity = "1";
+                progressBar.style.backgroundColor = "#ffdd44"
                 loadDot.style.visibility = "hidden";
                 loadDot.style.opacity = "0";
                 setTimeout( createProgressBar, 10);

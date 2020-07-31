@@ -369,7 +369,7 @@ h3 > img {
     /* margin-left: 30px; */
 }
 
-#case-studies::before, #case-studies::after {
+/* #case-studies::before, #case-studies::after {
     content: '';
     background-color: #cfcfcf;
     border-radius: 50%;
@@ -386,7 +386,7 @@ h3 > img {
 
 #case-studies::after {
     margin-left: 30px;
-}
+} */
 
 /* INDEX PEEK CARDS */
 .peek {
@@ -1036,11 +1036,11 @@ figcaption.for-image {
 #progress-bar {
     display: inline-block;
     height: 40vh;
-    min-height: 250px;
-    max-height: 300px;
+    min-height: 300px;
+    max-height: 350px;
     position: sticky;
     top: calc(72px + 25px + 2em);
-    background-color: #ffdd44;
+    background-color: white;
     width: 6px;
     border-radius: 1em;
     display: flex;
@@ -1050,9 +1050,9 @@ figcaption.for-image {
     white-space: nowrap;
 
     margin-top: 25px;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
+    /* visibility: hidden; */
+    /* opacity: 0; */
+    transition: background-color 0.4s ease-in-out;
 }
 
 .progress-step-label {
