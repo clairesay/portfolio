@@ -104,6 +104,9 @@ for (var c = 0; c < caseImages.length; c ++) {
 
     if (loaded == 0) {
         // console.log('loaded')
+        progressBar.style.backgroundColor = "#ffdd44"
+        loadDot.style.visibility = "hidden";
+        loadDot.style.opacity = "0";
         setTimeout( createProgressBar, 10);
     }
 }
