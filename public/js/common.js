@@ -1,6 +1,6 @@
 const allProjects = document.getElementsByClassName('nav-link')[0];
-const hearts = document.getElementsByClassName('nav-link')[2];
-const collaborate = document.getElementsByClassName('nav-link')[3];
+const hearts = document.getElementsByClassName('nav-link')[3];
+const collaborate = document.getElementsByClassName('nav-link')[2];
 const conservation = document.getElementsByClassName('nav-link')[4];
 const contactMe = document.getElementsByClassName('nav-link')[5];
 
