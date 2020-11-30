@@ -464,10 +464,10 @@ h3 > img {
 /* ACTIVE AND STATIC GIFS */
 img.static {
     position: absolute;
-    width: 100%;
+    /* width: 100%;
     height: 100%;
     min-width: 100%;
-    min-height: 100%;
+    min-height: 100%; */
     transition: all 0.1s ease-in;
     opacity: 1;
     z-index: 2;
