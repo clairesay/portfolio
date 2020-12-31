@@ -817,6 +817,64 @@ mark {
     padding-top: 2em;
 }
 
+.stay.problem-highlight {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    position: relative;
+    padding-top: 1em;
+}
+
+/* .stay.problem-highlight.slide-caption {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    position: relative;
+    padding-top: 0;
+} */
+
+.slide-caption {
+    position: absolute;
+    bottom: 0;
+}
+
+.slide-caption h3::before, .slide-caption i::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    min-width: 12px;
+    margin: 0.3em 0.5em auto 0;
+    margin-left: -1.25em;
+    border-radius: 1em;
+    background-color: #ffdd44;
+}
+
+/* COLOUR INDICATOR */
+.slide-cards div:first-of-type .slide-caption h3::before, .slide-cards div:nth-of-type(1) .slide-caption i::before {
+    background-color: #33326e;
+}
+
+.slide-cards div:nth-of-type(2) .slide-caption h3::before, .slide-cards div:nth-of-type(2) .slide-caption i::before {
+    background-color: #8b86be;
+}
+
+.slide-cards div:nth-of-type(3) .slide-caption h3::before, .slide-cards div:nth-of-type(3) .slide-caption i::before {
+    background-color: #e85979;
+}
+
+.slide-cards div:nth-of-type(4) .slide-caption h3::before, .slide-cards div:nth-of-type(4) .slide-caption i::before {
+    background-color: #ee978d;
+}
+
+/* .slide-cards.uneven {
+    display: flex;
+    align-items: space-between;
+} */
+
+.stay.problem-highlight article {
+    margin: auto;
+    margin-left: 2em;
+}
+
 .collaborate.problem-highlight article {
     margin: auto 0;
     margin-left: 2em;
@@ -953,6 +1011,16 @@ figcaption.for-image {
 
 .slide-cards img {
     box-shadow: 0 0 10px #aaaaaa;
+}
+
+/* SLIDE CAPTIONS - STAY */
+
+.slide-caption img {
+    box-shadow: none;
+}
+
+.slide-caption h3 {
+    margin-top: -10px;
 }
 
 /* SLIDE CARD BUTTONS */
