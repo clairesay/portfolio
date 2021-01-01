@@ -823,6 +823,59 @@ mark {
     position: relative;
     padding-top: 1em;
 }
+/* POPUP RESEARCH QUESTIONS - STAY */
+  
+    /* STAY ON TREK EDIT*/
+    .stay-desktop {
+        display: show;
+    }
+
+    .stay-mobile {
+        display: none;
+    }
+
+.stay-research-bubbles {
+    display:flex; 
+    justify-content: space-between;
+}
+
+.stay-research-bubbles img {
+    width: 22%;
+    transition: all 0.2s ease-in-out;
+    filter: drop-shadow(0px 0px 4px #999);
+    /* opacity: 0.6; */
+}
+
+.stay-research-bubbles p, .stay-research-bubbles i{
+    position: absolute; 
+    bottom: -72px;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.stay-research-bubbles i {
+    bottom: -28px;
+    opacity: 1;
+}
+
+.stay-research-bubbles img:hover {
+    transform: scale(1.05)
+}
+
+.stay-research-bubbles img:nth-of-type(1):hover ~ p:nth-of-type(1),
+.stay-research-bubbles img:nth-of-type(2):hover ~ p:nth-of-type(2),
+.stay-research-bubbles img:nth-of-type(3):hover ~ p:nth-of-type(3),
+.stay-research-bubbles img:nth-of-type(4):hover ~ p:nth-of-type(4) {
+    opacity: 1;
+}
+
+.stay-research-bubbles img:nth-of-type(n):hover ~ i {
+    opacity: 0;
+}
+
+.stay-research-bubbles + h3 {
+    margin-top: 108px;
+}
 
 /* .stay.problem-highlight.slide-caption {
     display: grid;
@@ -1600,6 +1653,19 @@ img.zoom:hover {
         width: auto;
     }
     
+    /* STAY ON TREK EDIT*/
+    .stay-desktop {
+        display: none;
+    }
+
+    .stay-mobile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .stay-research-bubbles + h3 {
+        margin-top: 60px;
+    }
 }
 
 @media only screen and (max-width: 450px) {
