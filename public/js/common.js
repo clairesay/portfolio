@@ -2,7 +2,8 @@ const allProjects = document.getElementsByClassName('nav-link')[0];
 const hearts = document.getElementsByClassName('nav-link')[3];
 const collaborate = document.getElementsByClassName('nav-link')[2];
 const conservation = document.getElementsByClassName('nav-link')[4];
-const contactMe = document.getElementsByClassName('nav-link')[5];
+const stay = document.getElementsByClassName('nav-link')[5];
+const contactMe = document.getElementsByClassName('nav-link')[6];
 
 //checking for the path name
 const path = window.location.pathname;
@@ -15,6 +16,8 @@ if (page.includes('3d-hearts')) {
     collaborate.style.fontWeight = "800";
 } else if (page.includes('conservation')) {
     conservation.style.fontWeight = "800";
+} else if (page.includes('stay')) {
+    stay.style.fontWeight = "800";
 } else if (page.includes('contact-me')) {
     contactMe.style.fontWeight = "800";
 }

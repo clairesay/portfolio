@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="UX/UI Portfolio by Claire Say">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home - Claire's Portfolio</title>
+        <link rel="canonical" href="https://clairesay.github.io/portfolio/"/>
+        <link rel="icon" href="public/images/favicon.png?" type="image/png" sizes="16x16">
+        <link rel="stylesheet" type="text/css" href="public/css/styles.css">
+    </head>
+    <body id="index">
+        <header class="yellow">
+            <a id="home-link" class="yellow" href="index.html">
+                <div class="white">claire.say</div>
+            </a>
+            <a class="nav-link w">case.studies
+                <div id="add-before" class="white"></div>
+                <div class="yellow" id="drop-down">
+                    <a class="nav-link y" href="collaborate.html">Collaborate to Donate</a>
+                    <a class="nav-link y" href="3d-hearts.html">3D Hearts Interaction</a>
+                    <a class="nav-link y" href="conservation.html">Conservation by the Coast</a>
+                    <a class="nav-link w" href="stayontrek.html">Stay on Trek</a>
+                    <!-- <a class="nav-link w" href="timely.html">Timely</a> -->
+                </div>
+            </a>
+            <a class="nav-link w" href="contact-me.html">about.me</a>
+        </header>
+        <section class="landing yellow">
+            <img id="profile-image" src="public/images/about/about-profile-image.png">
+            <article>
+                <h1>Hi! I'm Claire.</h1>
+            </br>
+                <h2><mark>I'm a Sydney-based UX/UI designer in training.</br>I have a keen interest in design as a means of empowering people and being a catalyst for positive change.</mark></h2>
+            </br>
+            <!-- <h4>When I'm not designing, you might find me crafting a piece of furniture or catching up on the latest indie creations on WEBTOON.</h4> -->
+            <!-- <h3><img src="public/images/location.svg">Sydney, Australia</h3> -->
+            </article>
+        </section>
+        <h1 id="case-studies">Case Studies</h1>
+        <section class="peek">
+            <article>
+                <h1><mark>Collaborate to Donate</mark></h1>
+                <p>Inspiring donors to make a productive impact in times of need.</p>
+                <button class="see-more" onclick="go('collaborate.html')">Check it out!</button>
+            </article>
+            <svg width="64" height="48" viewBox="0 0 64 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.8 24H62.8"/>
+                <path d="M40.1 46.7L62.8 24"/>
+                <path d="M40.1 1.3L62.8 24"/>
+            </svg>                
+            <a href="collaborate.html"><img class="static" src="public/images/collaborate/collaborate-banner.png"><img class="active" src="public/images/collaborate/collaborate-banner.gif"></a>
+        </section>
+    <!-- </br> -->
+        <section class="peek">
+            <a href="3d-hearts.html"><img class="static" src="public/images/3dhearts/exploration-desktop.jpg"><img class="active" src="public/images/3dhearts/heart-solution-5.gif"></a>
+            <svg width="63" height="48" viewBox="0 0 63 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M62 24H1"/>
+                <path d="M23.7 46.7L1 24"/>
+                <path d="M23.7 1.3L1 24"/>
+            </svg> 
+            <article>    
+                <h1><mark>3D Hearts Interaction</mark></h1>
+                <p>Designing and developing an interactive module for self-driven learning in the medical world.</p>
+                <button class="see-more" onclick="go('3d-hearts.html')">Check it out!</button>
+            </article>
+        </section>
+    <!-- </br> -->
+        <section class="peek">
+            <article>
+                <h1><mark>Conservation by the Coast</mark></h1>
+                <p>Empowering proactive environmental heroes while ensuring they enjoy everything Australia’s beautiful shorelines have to offer.</p>
+                <button class="see-more" onclick="go('conservation.html')">Check it out!</button>
+            </article>
+            <svg width="64" height="48" viewBox="0 0 64 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.8 24H62.8"/>
+                <path d="M40.1 46.7L62.8 24"/>
+                <path d="M40.1 1.3L62.8 24"/>
+            </svg>                
+            <a href="conservation.html"><img class="static" src="public/images/conservation/banner-landing.png"><img class="active" src="public/images/conservation/banner-landing.png"></a>
+        </section>
+        <footer>
+            <h3 class="email-address" onclick="copyTextFunction(0);" onmouseout="copyTextEnd(0);">clairesay13@gmail.com</h3>
+            <figcaption class="copy">Copy</figcaption>
+            <textarea>clairesay13@gmail.com</textarea>
+            <div>
+                <!-- <a class="social-icon" target="_blank" href="https://www.behance.net/clairesay1"><img class="social-icon" src="public/images/behancew.svg"></a> -->
+                <a class="social-icon" target="_blank" href="https://www.linkedin.com/in/claire-say-389511190/"><img class="social-icon" src="public/images/linkedinw.svg"></a>
+                <a class="social-icon" target="_blank" href="mailto:clairesay13@gmail.com?subject=Hey There!"><img class="social-icon" src="public/images/emailw.svg"></a>
+            </div>
+        </footer>
+    </body>
+    <script src="public/js/common.js"></script>
+    <script>
+        var caseImages = document.querySelectorAll('.peek img');
+        var loaded = caseImages.length;
+        for (var c = 0; c < caseImages.length; c ++) {
+
+            if (caseImages[c].complete) {
+
+                loaded --;
+            } else {
+
+                function imageEventListener(c) {
+                    caseImages[c].addEventListener("load", function() {
+                    loaded--;
+                    if (loaded == 0) {
+                        showImages(c);
+                    } else {
+                        caseImages[c].style.visibility = "hidden";
+                        caseImages[c].style.opacity = "0";
+                        // console.log('broken')
+                    }
+                });
+                imageEventListener(c);
+                }
+
+            }
+
+            if (loaded == 0) {
+                showImages(c);
+            }
+            
+            function showImages(c) {
+                caseImages[c].style.visibility = "visible";
+                caseImages[c].style.opacity = "1";
+            }
+        }
+    </script>
+</html>
