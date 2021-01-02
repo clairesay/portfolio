@@ -30,7 +30,7 @@ const body = document.getElementsByTagName('div')[0];
 
 window.addEventListener('scroll', function headerShadow() {
     if ((window.scrollY > 5) && (header.classList.contains('white'))) {
-        header.style.boxShadow = "0 4px 2px -2px #eeeeee"
+        header.style.boxShadow = "0 4px 2px -2px #fafafa"
     } else if ((window.scrollY > 5) && (header.classList.contains('yellow'))) {
         header.style.boxShadow = "0 4px 2px -2px #e7ca4a"
     } else {

@@ -131,7 +131,7 @@ window.onscroll = function () {
 }
 
 function progressAnchor(n) {
-    window.scrollTo(0, distanceArray[n] - 80)
+    window.scrollTo(0, distanceArray[n] - 90)
 };
 
 // ///////////// IMAGE ZOOM IN /////////////////////////
