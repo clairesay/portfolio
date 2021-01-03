@@ -179,17 +179,15 @@ header {
 }
 
 #index header.white {
-    padding-right: 0;
-    /* padding: 0;
-    margin: 0 2em; */
+    /* padding-right: 0; */
 }
 
 #index a:nth-of-type(3) {
-    margin-right: 1em;
+    /* margin-right: 1em; */
 }
 
 #index #drop-down {
-    right: calc(96px - 1em);
+    /* right: calc(96px - 1em); */
 }
 
 
@@ -1212,7 +1210,7 @@ figcaption.for-image {
 }
 
 .slide-cards img {
-    box-shadow: 0 0 10px #aaaaaa;
+    box-shadow: 0 0 8px #aaa;
 }
 
 /* SLIDE CAPTIONS - STAY */
@@ -1529,6 +1527,8 @@ img.zoom:hover {
 .segment:first-of-type div img{
     height: calc(100vh - 96px);
     width: calc(50% - 3.25em);
+    left: 0.5em;
+    /* margin-left: 1em; */
     /* margin-bottom: 36px;/ */
     margin-top: -32px;
 }
@@ -1537,12 +1537,8 @@ img.zoom:hover {
 .segments {
     width: 100vw;
     left: -1em;
-    /* top: 72px; */
-    /* scroll-snap-type: y mandatory; */
     overflow: hidden scroll;
     height: 100vh;
-
-    /* scroll-snap-type: mandatory; */
     scroll-snap-points-y: repeat(100vh);
     scroll-snap-type: y mandatory;
     scrollbar-color: transparent;
@@ -1623,7 +1619,7 @@ img.zoom:hover {
 
     .about-divide {
         /* display: grid; */
-        grid-template-columns: calc(124px + 4em) 1000px 400px 2em;
+        grid-template-columns: calc(124px + 4em) 1000px 360px 2em;
     }
 
     .segment {
@@ -1659,7 +1655,12 @@ img.zoom:hover {
     }
 
     .segment img {
-        height: calc(100vh - 72px - 2em)
+        height: calc(100vh - 72px - 2em);
+        box-shadow: 0 0 4px #888; 
+    }
+
+    .about-gallery img {
+        box-shadow: 0 0 4px #888
     }
 
     .segment:first-of-type {
@@ -1881,6 +1882,7 @@ img.zoom:hover {
 @media only screen and (max-width: 600px) {
     /* HEADER */
     header {
+        width: calc(100vw);
         grid-template-columns: 3fr 4fr 74px 74px 4fr 3fr;
         grid-template-rows: 72px 36px;
         grid-template-areas: ". . HomeLink HomeLink . ."  ". AllProjects AllProjects ContactMe ContactMe .";
@@ -1889,7 +1891,13 @@ img.zoom:hover {
         background-color: #ffdd44;
         /* border-radius: 0 0 7px 7px; */
         /* padding: 0 2em; */
-        padding-right: 1em;
+        padding: 0;
+        /* margin: 0 1.1em 0 0; */
+        /* margin-right: 1em; */
+    }
+
+    .segments::-webkit-scrollbar {
+        /* z-index: 1; */
     }
 
     header > a.nav-link {
@@ -1945,7 +1953,7 @@ img.zoom:hover {
     /* GLOBAL */
 
     .landing {
-        padding-top: 132px;
+        padding-top: 108px;
     }
 
     /* INDEX */
@@ -2103,7 +2111,7 @@ img.zoom:hover {
     }
 
     .segment article:nth-of-type(2) {
-        min-height: 280px;
+        min-height: 240px;
         margin: 0 4em 0 2em;
     }
 }
