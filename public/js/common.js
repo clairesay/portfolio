@@ -25,33 +25,6 @@ if (page.includes('3d-hearts')) {
 ///////////////////// ALL PROJECTS /////////////////////////
 const captionP = document.querySelectorAll('figcaption p');
 
-//////////////////// TOP DROP SHADOW ////////////////////////////
-const header = document.getElementsByTagName('header')[0];
-const dropDown = document.getElementById('drop-down');
-
-const body = document.getElementsByTagName('div')[0];
-
-window.addEventListener('scroll', function headerShadow() {
-    if ((window.scrollY > 5) && (header.classList.contains('white'))) {
-        header.style.boxShadow = "0 4px 2px -2px #fafafa"
-    } else if ((window.scrollY > 5) && (header.classList.contains('yellow'))) {
-        header.style.boxShadow = "0 4px 2px -2px #e7ca4a"
-    } else {
-        header.style.boxShadow = "0 4px 2px -2px transparent"
-    }
-})
-
-const addBefore = document.getElementById('add-before');
-
-dropDown.addEventListener('mouseenter', function () {
-    addBefore.style.opacity = "1"
-})
-
-dropDown.addEventListener('mouseleave', function () {
-
-    addBefore.style.opacity = "0"
-})
-
 ////////////////////// EMAIL ADDRESS COPYING ///////////////////////////////
 
 var copyTip = document.getElementsByClassName('copy');

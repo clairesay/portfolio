@@ -10,10 +10,10 @@
         <link rel="stylesheet" type="text/css" href="public/css/styles.css">
     </head>
     <header class="white">
-        <a id="home-link" class="white" style="border-color:#ffdd44; "href="index.html">
+        <a id="home-link" class="white" href="index.html">
             <div class="yellow">claire.say</div>
         </a>
-        <a class="nav-link y">case.studies
+        <a class="nav-link y" >case.studies
             <div id="add-before" class="yellow"></div>
             <div id="drop-down">
                 <a class="nav-link w" href="collaborate.html">Collaborate to Donate</a>
@@ -30,18 +30,29 @@
         <section class="segment">
             <article></article>
             <div>
-                <img style="visibility: hidden;" src="public/images/mango.jpg">
+                <img src="public/images/about/about-1.jpg">
                 <img src="public/images/mango-2.jpg">
             </div>
 
             <article>    
                 <h1>👋</h1>
                     <h1>Hi, I'm Claire!</h1>
-                <p>I'm a Sydney-based UX/UI designer in training.
+                <p>I'm a Sydney-based UX/UI designer in training.</p>
                 </br>
-                    I have a keen interest in design as a means of empowering people and being a catalyst for positive change.</p>
+        
+                    <p>I have a keen interest in design as a means of empowering people and being a catalyst for positive change.</p>
                 <!-- <button class="see-more" onclick="go('collaborate.html')">Check it out!</button> -->
+
+                <button class="page-link" id="see-projects" onclick="seeProjects();">
+                    <svg>
+                        <!-- <path xmlns="http://www.w3.org/2000/svg" d="M67.34,1.28a3.55,3.55,0,1,0-5.45,4.54,3.26,3.26,0,0,0,.45.46L87.85,31.82H3.53a3.56,3.56,0,0,0,0,7.11H87.85L62.3,64.44a3.61,3.61,0,0,0,0,5,3.52,3.52,0,0,0,5,0h0l31.6-31.6A3.47,3.47,0,0,0,99,32.93l-.09-.09Z" transform="translate(-0.16)"/> -->
+                        <path xmlns="http://www.w3.org/2000/svg" d="M69.2,67.18a3.55,3.55,0,0,0-4.55-5.46,3.26,3.26,0,0,0-.45.46L38.66,87.69V3.37a3.56,3.56,0,0,0-7.11,0V87.69L6,62.14a3.61,3.61,0,0,0-5,0,3.52,3.52,0,0,0,0,5H1l31.6,31.6a3.46,3.46,0,0,0,4.9.09l.1-.09Z"/>
+                    </svg>
+                    <p>See my projects</p>
+                </button>
             </article>
+
+
         </section>
 
         <section class="segment">
@@ -50,17 +61,27 @@
             <article>    
                 <h1>Collaborate to Donate</h1>
                 <p>Inspiring donors to make a productive impact in times of need.</p>
-                <button class="see-more" onclick="go('collaborate.html')">Check it out!</button>
+                <!-- <button class="see-more" onclick="go('collaborate.html')">Check it out!</button> -->
+                <button class="page-link" onclick="go('collaborate.html')">
+                    <svg>
+                        <path xmlns="http://www.w3.org/2000/svg" d="M67.34,1.28a3.55,3.55,0,1,0-5.45,4.54,3.26,3.26,0,0,0,.45.46L87.85,31.82H3.53a3.56,3.56,0,0,0,0,7.11H87.85L62.3,64.44a3.61,3.61,0,0,0,0,5,3.52,3.52,0,0,0,5,0h0l31.6-31.6A3.47,3.47,0,0,0,99,32.93l-.09-.09Z" transform="translate(-0.16)"/>
+                    </svg>
+                </button>
             </article>
         </section>
 
         <section class="segment">
             <article></article>
-            <img src="public/images/3dhearts/exploration-desktop.jpg">
+            <img src="public/images/3dhearts/crop-banner.jpg">
             <article>    
                 <h1>3D Hearts Interaction</h1>
                 <p>Designing and developing an interactive module for self-driven learning in the medical world.</p>
-                <button class="see-more" onclick="go('3d-hearts.html')">Check it out! </button>
+                <!-- <button class="see-more" onclick="go('3d-hearts.html')">Check it out! </button> -->
+                <button class="page-link" onclick="go('3d-hearts.html')">
+                    <svg>
+                        <path xmlns="http://www.w3.org/2000/svg" d="M67.34,1.28a3.55,3.55,0,1,0-5.45,4.54,3.26,3.26,0,0,0,.45.46L87.85,31.82H3.53a3.56,3.56,0,0,0,0,7.11H87.85L62.3,64.44a3.61,3.61,0,0,0,0,5,3.52,3.52,0,0,0,5,0h0l31.6-31.6A3.47,3.47,0,0,0,99,32.93l-.09-.09Z" transform="translate(-0.16)"/>
+                    </svg>
+                </button>
             </article>
         </section>
 
@@ -70,7 +91,27 @@
             <article>    
                 <h1>Conservation by the Coast</h1>
                 <p>Empowering proactive environmental heroes while ensuring they enjoy everything Australia’s beautiful shorelines have to offer.</p>
-                <button class="see-more" onclick="go('conservation.html')">Check it out!</button>
+                <!-- <button class="see-more" onclick="go('conservation.html')">Check it out!</button> -->
+                <button class="page-link" onclick="go('conservation.html')">
+                    <svg>
+                        <path xmlns="http://www.w3.org/2000/svg" d="M67.34,1.28a3.55,3.55,0,1,0-5.45,4.54,3.26,3.26,0,0,0,.45.46L87.85,31.82H3.53a3.56,3.56,0,0,0,0,7.11H87.85L62.3,64.44a3.61,3.61,0,0,0,0,5,3.52,3.52,0,0,0,5,0h0l31.6-31.6A3.47,3.47,0,0,0,99,32.93l-.09-.09Z" transform="translate(-0.16)"/>
+                    </svg>
+                </button>
+            </article>
+        </section>
+
+        <section class="segment">
+            <article></article>
+            <img src="public/images/stay/stay-banner.png">
+            <article>    
+                <h1>Stay on Trek</h1>
+                <p>Immersive simulation training to support emergency education in a commercial space-flight context.</p>
+                <!-- <button class="see-more" onclick="go('3d-hearts.html')">Check it out! </button> -->
+                <button class="page-link" onclick="go('stayontrek.html')">
+                    <svg>
+                        <path xmlns="http://www.w3.org/2000/svg" d="M67.34,1.28a3.55,3.55,0,1,0-5.45,4.54,3.26,3.26,0,0,0,.45.46L87.85,31.82H3.53a3.56,3.56,0,0,0,0,7.11H87.85L62.3,64.44a3.61,3.61,0,0,0,0,5,3.52,3.52,0,0,0,5,0h0l31.6-31.6A3.47,3.47,0,0,0,99,32.93l-.09-.09Z" transform="translate(-0.16)"/>
+                    </svg>
+                </button>
             </article>
         </section>
 
@@ -138,6 +179,15 @@
                 caseImages[c].style.visibility = "visible";
                 caseImages[c].style.opacity = "1";
             }
+        }
+
+
+        // SEEING PROJECTS
+
+        function seeProjects() {
+            var segments = document.getElementsByClassName('segments')[0];
+            var segment = document.getElementsByClassName('segment')[0];
+            segments.scrollTo(0, (segment.clientHeight))
         }
     </script>
 </html>
