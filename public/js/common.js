@@ -55,9 +55,9 @@ const segments = document.getElementsByClassName('segments')[0];
 
 if(typeof(segments) != 'undefined' && segments != null){
 segments.addEventListener('scroll', function headerShadow() {
-    if ((segments.scrollTop > 5) && (header.classList.contains('white')) && (screenSizeToggle === 'desktop1080')) {
+    if ((segments.scrollTop > 112) && (header.classList.contains('white')) && (screenSizeToggle === 'desktop1080')) {
         header.style.boxShadow = "0 4px 12px -2px #888"
-    } else if ((window.scrollTop > 5) && (header.classList.contains('yellow'))) {
+    } else if ((window.scrollTop > 84) && (header.classList.contains('yellow'))) {
         header.style.boxShadow = "0 4px 2px -2px #e7ca4a"
     } else {
         header.style.boxShadow = "0 4px 2px -2px transparent"

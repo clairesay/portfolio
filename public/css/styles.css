@@ -1280,18 +1280,33 @@ img.zoom:hover {
 .about-gallery {
     background-color: white;
     z-index: 5;
-    /* display: flex; */
-    /* flex-wrap: wrap; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     /* justify-content: space-around; */
 }
+
 .about-gallery img {
-    max-width: calc(50% - 3em);
-    margin-left: 1.5em;
-    margin-bottom: 1.5em;
+
+    max-width: calc(100% - 2em);
+    /* margin-left: 1.5em; */
+    margin-bottom: 2em;
     /* margin-left: 0; */
     filter: grayscale(1) brightness(1.2);
     transition: all 0.2s ease-in-out;
     box-shadow: 0 0 12px #888; 
+}
+
+.column {
+    flex: 50%;
+    max-width: 50%;
+    /* padding: 0 4px; */
+}
+
+.column img {
+/* margin-top: 8px; */
+vertical-align: middle;
+width: 100%;
 }
 
 .about-gallery img:hover {
@@ -1305,6 +1320,7 @@ img.zoom:hover {
     /* grid-template-columns: calc(124px + 4em) 1fr calc(254px - 2em) 3em; */
     grid-template-columns: calc(124px + 8em) 2fr 1fr;
     background-color: white;
+    position: relative;
 }
 
 .segment img {
@@ -1337,13 +1353,26 @@ img.zoom:hover {
 
 .segment:first-of-type div img{
     height: calc(100vh - 96px);
-    width: calc(50% - 3.25em);
-    left: 0.5em;
+    /* width: calc(75% - 3.25em); */
+    /* left: 0.5em; */
     /* margin-left: 1em; */
     /* margin-bottom: 36px;/ */
     margin-top: -32px;
+    object-position: 30% 60%;
+    position: relative;
 }
 
+#rebel {
+    position: absolute;
+    z-index: 5;
+    box-shadow: none;
+    object-fit: fill;
+    left: -4em;
+    bottom: -40vh;
+    transform-origin: top left;
+    transform: scale(0.2);
+    /* max-width: 400px; */
+}
 
 
 .segments {
@@ -1468,8 +1497,6 @@ img.zoom:hover {
     
     .segment:first-of-type div img{
         height: calc(100vh - 132px);
-        width: calc(50% - 3.25em);
-        /* margin-bottom: 36px;/ */
         margin-top: 1em;
     }
     
@@ -1508,6 +1535,10 @@ img.zoom:hover {
         min-width: 0;
     }
 
+    #rebel {
+        display: none;
+    }
+
 }
 
 @media only screen and (max-width: 800px) {
@@ -1536,7 +1567,7 @@ img.zoom:hover {
 
 
     .segment {
-        min-height: 60vh;
+        /* min-height: 60vh; */
         grid-template-columns: auto;
         grid-template-rows: 0 40vh auto 0;
         padding-top: calc(108px);
@@ -1560,8 +1591,18 @@ img.zoom:hover {
         margin-bottom: 0.25em;
     }
 
+    .segments .segment:first-of-type {
+        grid-template-rows: 2em calc(30vh + 1em) auto 0
+    }
+
     .segments .segment:first-of-type img {
-        display: none;
+        /* display: none; */
+        height: 30vh;
+        margin-bottom: 0;
+    }
+
+    .segments .segment div {
+        height: 30vh;
     }
 
 }
