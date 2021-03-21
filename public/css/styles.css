@@ -1326,6 +1326,8 @@ width: 100%;
 .segment img {
     max-width: calc(100% - 4em);
     object-fit: cover;
+    object-position: 10% 20%;
+    /* top: 20px; */
     height: calc(100vh - 6em);
     width: 100%;
     margin: auto;
